@@ -1,0 +1,16 @@
+log/*
+temp/*
+vendor/*
+mod/*
+bin/*
+node_modules
+app/config/composer.json
+!.gitignore
+!.htaccess
+!web.config
+.idea
+www/components
+composer.lock
+www/assets/*
+!default
+www/mod-assets

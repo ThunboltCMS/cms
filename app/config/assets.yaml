@@ -1,0 +1,35 @@
+## Front module
+front:
+  css:
+    "compiled/front.min.css":
+      ## Bootstrap
+      - "components/bootstrap/dist/css/bootstrap.min.css"
+      - "components/bootstrap/dist/css/bootstrap-theme.min.css"
+      ## Forms
+      - "components/datetimepicker/jquery.datetimepicker.css"
+      - "components/selectize/dist/css/selectize.css"
+      - "components/selectize/dist/css/selectize.default.css"
+      ## Main
+      - "css/flashes.css"
+      - "css/spinner.css"
+      - "css/main.css"
+  js:
+    "compiled/front.min.js":
+      ## Bootstrap
+      - "components/bootstrap/dist/js/bootstrap.min.js"
+      ## Forms
+      - "components/nette-forms/src/assets/netteForms.js"
+      - "components/selectize/dist/js/standalone/selectize.min.js"
+      - "components/jquery.inputmask/dist/min/inputmask/inputmask.min.js"
+      - "components/jquery.inputmask/dist/min/inputmask/inputmask.regex.extensions.min.js"
+      - "components/jquery.inputmask/dist/min/inputmask/jquery.inputmask.min.js"
+      - "components/datetimepicker/build/jquery.datetimepicker.full.min.js"
+      - "js/forms/error.rendering.js"
+      - "js/forms/form.controls.js"
+      ## Ajax
+      - "components/nette.ajax.js/nette.ajax.js"
+      - "js/ajax/spinner.js"
+      ## Main
+      - "js/main.js"
+    "compiled/front.header.min.js":
+      - "components/jquery/dist/jquery.min.js"

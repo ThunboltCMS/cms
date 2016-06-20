@@ -1,0 +1,11 @@
+{capture $webTitle|stripHtml|trim}
+	{ifset #setTitle}
+		{include setTitle|stripHtml|trim}
+	{else}
+		{capture $foo|stripHtml|trim}
+			{ifset #title}{include title}{/ifset}
+		{/capture}
+		{$settings->websiteTitle|replace:'%title',$foo}
+	{/ifset}
+{/capture}
+<title>{$webTitle}</title>

@@ -1,0 +1,35 @@
+php:
+	date.timezone: Europe/Prague
+
+session:
+	expiration: 15 days
+	cookiePath: '?->getUrl()->getBasePath()'(@Nette\Http\Request) ## Cookie path same as $basePath
+
+extensions:
+	translation: Kdyby\Translation\DI\TranslationExtension
+	- Zenify\DoctrineBehaviors\DI\TimestampableExtension
+
+translation:
+	default: 'cs'
+	whitelist: [cs]
+	dirs:
+		- %appDir%/translations
+		- %appDir%/modules
+		- %appDir%/../mod/modules
+	resolvers:
+		session: yes
+	loaders: [neon]
+
+form:
+	factories:
+		front: App\Factories\Forms\FrontFactory
+
+services:
+	- App\Forms\SignInForm
+
+shortcuts:
+	home.front: ':Front:Homepage:'
+
+di:
+	debugger: no
+

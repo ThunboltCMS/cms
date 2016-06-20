@@ -1,0 +1,32 @@
+#ajax-spinner {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 99999999999999999;
+  height: 100%;
+  background: rgba(102, 204, 255, 0.5);
+}
+#ajax-spinner.show {
+  display: block;
+}
+#ajax-spinner img {
+  height: 80px;
+}
+#ajax-spinner .img-wrapper {
+  text-align: center;
+  top: 50%;
+  margin-top: -40px;
+  position: relative;
+}
+@media (max-width: 600px) {
+  #ajax-spinner img {
+    height: 40px;
+  }
+  #ajax-spinner .img-wrapper {
+    margin-top: -20px;
+  }
+}

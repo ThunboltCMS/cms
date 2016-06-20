@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="cs-CZ"> <!--<![endif]-->
+<head>
+	{* Returns $webTitle *}
+	<Title n:component />
+
+	{* Meta *}
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<meta name="description" content="{block description|stripHtml|trim}{$settings->websiteDesc|trim}{/block}">
+	<meta n:ifset="$nofollow" name="robots" content="nofollow">
+
+	{* Facebook *}
+	{ifset $settings->facebook['id']}
+		<meta property="fb:app_id" content="{$settings->facebook['id']}">
+		<meta property="og:title" content="">
+		<meta property="og:type" content="{include #description|stripHtml|trim}">
+		<meta n:ifset="#og:image" property="og:image" content="{include og:image|stripHtml|trim}">
+		<meta property="og:description" content="{include description|stripHtml|trim}">
+		<meta property="og:url" content="{block og:url|stripHtml|trim}{link //this}{/block}">
+	{/ifset}
+
+	{* Twitter *}
+	{ifset $settings->twitter['id']}
+		<meta name="twitter:card" content="summary">
+		<meta n:ifset="$webTitle" name="twitter:title" content="">
+		<meta name="twitter:description" content="{include description|stripHtml|trim}">
+		<meta n:ifset="#og:image" name="twitter:image" content="{include #og:image|stripHtml|trim}">
+	{/ifset}
+
+	{* Css styles *}
+	{assets compiled/front.min.css}
+
+	{* jQuery *}
+	{assets compiled/front.header.min.js}
+</head>
+<body>
+	<script>document.documentElement.className+=' js';var basePath = {$basePath};</script>
+	<LayoutCoreSocial n:component />
+	<LayoutCoreFlashes n:component />
+	<LayoutCoreSpinner n:component />
+
+	<!-- Content -->
+	{include content}
+
+	{block scripts}
+		{assets compiled/front.min.js}
+	{/block}
+</body>
+</html>

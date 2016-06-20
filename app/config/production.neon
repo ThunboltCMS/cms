@@ -1,0 +1,11 @@
+extensions:
+	bar: Thunbolt\Bar\DI\BarExtension
+
+di:
+	debugger: no
+
+assets:
+	minify: yes
+
+translation:
+	debugger: no

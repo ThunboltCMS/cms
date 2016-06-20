@@ -1,0 +1,83 @@
+{define favicon}
+	{if $settings->websiteFavicon}
+		<link rel="icon" type="image/png" href="{img $settings->websiteFavicon, '16x16', 'exact'}">
+		<link rel="apple-touch-icon" href="{img $settings->websiteFavicon, '57x57', 'exact'}">
+		<link rel="apple-touch-icon" sizes="57x57" href="{img $settings->websiteFavicon, '57x57', 'exact'}">
+		<link rel="apple-touch-icon" sizes="72x72" href="{img $settings->websiteFavicon, '72x72', 'exact'}">
+		<link rel="apple-touch-icon" sizes="76x76" href="{img $settings->websiteFavicon, '76x76', 'exact'}">
+		<link rel="apple-touch-icon" sizes="114x114" href="{img $settings->websiteFavicon, '114x114', 'exact'}">
+		<link rel="apple-touch-icon" sizes="120x120" href="{img $settings->websiteFavicon, '120x120', 'exact'}">
+		<link rel="apple-touch-icon" sizes="144x144" href="{img $settings->websiteFavicon, '144x144', 'exact'}">
+		<link rel="apple-touch-icon" sizes="152x152" href="{img $settings->websiteFavicon, '152x152', 'exact'}">
+	{/if}
+{/define}
+
+{define flashes}
+	<div n:snippet="flashes">
+		<div n:if="$flashes" class="flashes-container top-right">
+			<div n:foreach="$flashes as $flash" n:class="notify, dark-theme, $flash->type, notify-top-right, $iterator->isFirst() ? first">
+				<a href="#" onclick="$(this).closest('div').fadeOut(500, function () { $(this).remove(); });return false;" class="notify-close-btn"></a>
+				<div class="notify-icon">
+					<div class="notify-icon-inner">
+						<img src="{$basePath}/images/flashes/{$flash->type}.png">
+					</div>
+				</div>
+				<div class="notify-text">
+					<h3>{_'core.flashes.'.$flash->type|firstUpper}</h3>
+					<p>{$flash->message}</p>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		<script n:if="$flashes">
+			$(document).ready(function () {
+				$('.flashes-container .notify').each(function (index) {
+					var time = 6e3 * (index + 1);
+					var that = this;
+
+					setTimeout(function () {
+						$(that).fadeOut(500, function () {
+							$(this).remove();
+						});
+					}, time);
+				});
+			});
+		</script>
+	</div>
+{/define}
+
+{define social}
+	{if isset($parameters->google) && $parameters->google->id}
+		<script>
+			ga=function(){ ga.q.push(arguments) };ga.q=[];ga.l=+new Date;
+			ga('create',{$parameters->google['id']},'auto');ga('send','pageview');
+		</script>
+		<script src="https://www.google-analytics.com/analytics.js" async defer></script>
+	{/if}
+	{if isset($parameters->facebook) && $parameters->facebook->id}
+		<script src="https://connect.facebook.net/en_US/sdk.js" async defer></script>
+		<script n:if="isset($parameters->facebook['id']) && $parameters->facebook['id']">
+			window.fbAsyncInit = function() {
+				FB.init({
+					appId      : {$parameters->facebook['id']},
+					xfbml      : true,
+					version    : 'v2.1'
+				});
+			};
+		</script>
+		<div n:ifset="$parameters->facebook['id']" id="fb-root"></div>
+	{/if}
+
+	{if isset($parameters->websiteOldBrowsers) && $parameters->websiteOldBrowsers}
+		<script src="https://browser-update.org/update.js" async defer></script>
+	{/if}
+{/define}
+
+{define spinner}
+	<div id="ajax-spinner">
+		<div class="img-wrapper">
+			<img src="{$basePath}/images/spinner.svg">
+		</div>
+	</div>
+{/define}
+
