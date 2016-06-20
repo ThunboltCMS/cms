@@ -92,6 +92,7 @@ requirements:
 	loggedIn: 'Tato akce je povolena pouze přihlášeným uživatelům.'
 	isAllowed: 'Na tuto akci nemáte dostatečné opravnění.'
 timeAgo:
+	now: 'nyní'
 	minutes: 'před minutou|před %count% minutami|před %count% minutami'
 	hours: 'před hodinou|před %count% hodinami|před %count% hodinami'
 	days: 'před dnem|před %count% dny|před %count% dny'
