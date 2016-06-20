@@ -30,7 +30,6 @@
 		"kdyby/console": "^2.5",
 		"kdyby/annotations": "^2.3",
 		"kdyby/doctrine-cache": "^2.5",
-		"kdyby/events": "^3.0",
 		"kdyby/translation": "~2.3.0",
 		"nextras/mail-panel": "^2.2",
 		"zenify/doctrine-behaviors": "~2.4",
