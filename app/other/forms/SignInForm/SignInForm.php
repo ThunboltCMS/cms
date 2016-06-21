@@ -4,22 +4,18 @@ namespace App\Forms;
 
 use Nette\Security\AuthenticationException;
 use Nette\Utils\ArrayHash;
-use WebChemistry\Forms\Control;
+use Thunbolt\Forms\BaseControl;
+use Thunbolt\Forms\FormCase;
 use WebChemistry\Forms\Form;
-use WebChemistry\Forms\Factory\IContainer;
 use Nette\Security\User;
 
-class SignInForm extends Control {
+class SignInForm extends BaseControl {
 
 	/** @var User */
 	private $user;
 
-	/**
-	 * @param IContainer $factory
-	 * @param User $user
-	 */
-	public function __construct(IContainer $factory, User $user) {
-		parent::__construct($factory);
+	public function __construct(FormCase $formCase, User $user) {
+		parent::__construct($formCase);
 		$this->user = $user;
 	}
 

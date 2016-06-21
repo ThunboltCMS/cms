@@ -4,12 +4,13 @@ namespace App\Factories\Forms;
 
 use App\Renderers\Forms\FrontRenderer;
 use Kdyby\Translation\Translator;
+use Nette\Application\UI\ITemplateFactory;
 use Nette\Object;
 use WebChemistry\Forms\Doctrine;
+use WebChemistry\Forms\Factory\IFormFactory;
 use WebChemistry\Forms\Form;
-use WebChemistry\Forms\Factory\IFactory;
 
-class FrontFactory extends Object implements IFactory {
+class FrontFactory extends Object implements IFormFactory {
 
 	/** @var Doctrine */
 	private $doctrine;
@@ -20,13 +21,17 @@ class FrontFactory extends Object implements IFactory {
 	/** @var Translator */
 	private $translator;
 
+	/** @var ITemplateFactory */
+	private $templateFactory;
+
 	/**
 	 * @param Doctrine $doctrine
 	 * @param Translator $translator
 	 */
-	public function __construct(Doctrine $doctrine, Translator $translator = NULL) {
+	public function __construct(Doctrine $doctrine, Translator $translator = NULL, ITemplateFactory $templateFactory = NULL) {
 		$this->doctrine = $doctrine;
 		$this->translator = $translator;
+		$this->templateFactory = $templateFactory;
 	}
 
 	/**
@@ -49,8 +54,10 @@ class FrontFactory extends Object implements IFactory {
 		if ($this->translator) {
 			$form->setTranslator($this->translator);
 		}
-		$form->setSettings($this->parameters);
-		$form->setDoctrine($this->doctrine);
+		if (isset($this->parameters['recaptcha'])) {
+			$form->setRecaptchaConfig($this->parameters['recaptcha']);
+		}
+		$form->injectComponents($this->doctrine, $this->templateFactory);
 
 		return $form;
 	}
