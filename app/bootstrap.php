@@ -2,7 +2,7 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
-$configurator = new WebChemistry\Configuration\Configuration;
+$configurator = new Thunbolt\Configuration\Configuration();
 $bootstrap = new Thunbolt\Bootstrap(__DIR__);
 
 $bootstrap->initialize();
