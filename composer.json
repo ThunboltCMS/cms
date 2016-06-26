@@ -46,6 +46,7 @@
 		"webchemistry/assets": "dev-master",
 		"webchemistry/utils": "~1.0",
 		"thunbolt/configuration": "^1.0.4",
+		"thunbolt/grid": "dev-master",
 		"thunbolt/composer-installer": "dev-master",
 		"thunbolt/application": "dev-master",
 		"thunbolt/commands": "dev-master",
