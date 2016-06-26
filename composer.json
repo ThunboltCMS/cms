@@ -49,11 +49,10 @@
 		"thunbolt/composer-installer": "dev-master",
 		"thunbolt/application": "dev-master",
 		"thunbolt/commands": "dev-master",
-		"thunbolt/core": "dev-master",
 		"thunbolt/templates": "dev-master",
 		"thunbolt/thunbolt": "dev-master",
-		"thunbolt-module/core": "dev-master",
 		"thunbolt/template-bin": "dev-master",
+		"thunbolt-module/core": "dev-master",
 		"thunbolt-module/template-bin": "dev-master"
 	},
 	"minimum-stability": "dev"
