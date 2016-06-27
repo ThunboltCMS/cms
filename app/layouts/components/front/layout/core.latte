@@ -23,7 +23,7 @@
 					</div>
 				</div>
 				<div class="notify-text">
-					<h3>{_'core.flashes.'.$flash->type|firstUpper}</h3>
+					<h3>{ifset Thunbolt\Translation\Translation::$flashes[$flash->type]}{Thunbolt\Translation\Translation::$flashes[$flash->type]|firstUpper}{else}{$flash->type|firstUpper}{/ifset}</h3>
 					<p>{$flash->message}</p>
 				</div>
 				<div class="clearfix"></div>
