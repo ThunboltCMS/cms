@@ -66,6 +66,8 @@ forms:
 	maxPostSize: 'Maximální povolená velikost formuláře je %d bajtů.'
 	image: 'Nahraný soubor musí být ve formátu jpg, png, gif.'
 	mimeType: 'Tento soubor není v očekávaném formátu.'
+	upload:
+		valid: 'Nastala chyba během nahrávání souboru.'
 	select:
 		valid: 'Prosím vyberte správnou hodnotu.'
 	webchemistry:
