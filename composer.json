@@ -56,7 +56,6 @@
 		"thunbolt/doctrine-timestamp": "dev-master",
 
 		"thunbolt-module/core": "dev-master",
-		"thunbolt-module/admin": "dev-master",
 
 		"thunbolt/template-bin": "dev-master",
 		"thunbolt-module/template-bin": "dev-master"
