@@ -7,11 +7,7 @@ session:
 
 extensions:
 	translation: Kdyby\Translation\DI\TranslationExtension
-	- Zenify\DoctrineBehaviors\DI\TimestampableExtension
-	events: Kdyby\Events\DI\EventsExtension
-
-events:
-	debugger: no
+	- Thunbolt\Doctrine\DI\TimestampExtension
 
 translation:
 	default: 'cs'
