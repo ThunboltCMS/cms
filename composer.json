@@ -55,10 +55,7 @@
 		"thunbolt/thunbolt": "dev-master",
 		"thunbolt/doctrine-timestamp": "dev-master",
 
-		"thunbolt-module/core": "dev-master",
-
-		"thunbolt/template-bin": "dev-master",
-		"thunbolt-module/template-bin": "dev-master"
+		"thunbolt-module/core": "dev-master"
 	},
 	"minimum-stability": "dev"
 }
