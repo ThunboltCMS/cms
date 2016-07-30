@@ -23,7 +23,6 @@ $bootstrap->loadComposerConfig($configurator);
 $configurator->addConfig(__DIR__ . '/config/settings.neon');
 require __DIR__ . '/mode.php';
 $configurator->addAutoloadConfig(__DIR__ . '/modules/', 'config.neon', 1);
-$configurator->addAutoloadConfig(__DIR__ . '/other', 'config.neon', 1);
 $configurator->addConfig(__DIR__ . '/config/config.local.neon');
 
 return $configurator->createContainer();
