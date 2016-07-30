@@ -9,6 +9,20 @@ extensions:
 	translation: Kdyby\Translation\DI\TranslationExtension
 	- Thunbolt\Doctrine\DI\TimestampExtension
 
+settings:
+	paramsSettings:
+		entity: Entity\Parameter
+
+assets:
+	resources:
+		- '%appDir%/config/assets.yaml'
+
+doctrine:
+	metadata:
+		Entity:
+			- %appDir%/modules
+			- %appDir%/../mod
+
 translation:
 	default: 'cs'
 	whitelist: [cs]
@@ -23,9 +37,6 @@ translation:
 form:
 	factories:
 		front: App\Factories\Forms\FrontFactory
-
-services:
-	- App\Forms\SignInForm
 
 shortcuts:
 	home.front: ':Front:Homepage:'

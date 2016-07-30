@@ -20,9 +20,12 @@ $configurator->setScanDirs([__DIR__ . '/modules']);
 
 $bootstrap->loadComposerConfig($configurator);
 
-$configurator->addConfig(__DIR__ . '/config/settings.neon');
-require __DIR__ . '/mode.php';
 $configurator->addAutoloadConfig(__DIR__ . '/modules/', 'config.neon', 1);
-$configurator->addConfig(__DIR__ . '/config/config.local.neon');
+
+$configurator->addConfig(__DIR__ . '/config/settings.neon');
+$configurator->addConfig(__DIR__ . '/config/services.neon');
+$configurator->addConfig(__DIR__ . '/config/config.neon');
+
+require __DIR__ . '/mode.php';
 
 return $configurator->createContainer();
