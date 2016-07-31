@@ -2,11 +2,9 @@
   "name": "project",
   "dependencies": {
     "fontawesome": "~4.5.0",
-    "adminlte": "~2.3.2",
     "jquery-ui": "~1.11.4",
     "datetimepicker": "^2.4.6",
     "selectize": "~0.12.1",
-    "grido": "~2.1.0",
     "nette-forms": "^2.1.0",
     "jquery.inputmask": "^3.2.7",
     "ckeditor": "^4.5.7",
