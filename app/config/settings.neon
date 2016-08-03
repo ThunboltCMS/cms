@@ -1,10 +1,10 @@
 settings:
 	websiteName: 'Website'
 	websiteTitle: 'Website: %title'
-	websiteDesc: 'Popis stránky'
+	websiteDesc: 'Page description'
 	websiteKeys:
-		- 'klíčové'
-		- 'tagy'
+		- 'keys'
+		- 'tags'
 	websiteEmail: 'email@example.com'
 	websiteFavicon: ''
 	websiteOldBrowsers: yes
