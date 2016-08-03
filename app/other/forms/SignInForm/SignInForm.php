@@ -6,10 +6,11 @@ use Nette\Security\AuthenticationException;
 use Nette\Utils\ArrayHash;
 use Thunbolt\Forms\BaseControl;
 use Thunbolt\Forms\FormCase;
+use Thunbolt\User\Interfaces\ISignInForm;
 use WebChemistry\Forms\Form;
 use Nette\Security\User;
 
-class SignInForm extends BaseControl {
+class SignInForm extends BaseControl implements ISignInForm {
 
 	/** @var User */
 	private $user;
