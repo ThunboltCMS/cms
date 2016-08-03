@@ -29,7 +29,7 @@ translation:
 	dirs:
 		- %appDir%/translations
 		- %appDir%/modules
-		- %appDir%/../mod/modules
+		- %appDir%/../mod
 	resolvers:
 		session: yes
 	loaders: [neon]
