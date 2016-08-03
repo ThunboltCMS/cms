@@ -47,7 +47,7 @@
 		"webchemistry/utils": "~1.0",
 		"webchemistry/component-macro": "dev-master",
 
-		"thunbolt/configuration": "^1.0.4",
+		"thunbolt/configuration": "^1.0.5",
 		"thunbolt/composer-installer": "^1.0.0",
 		"thunbolt/application": "~1.0.0",
 		"thunbolt/commands": "~1.0.0",
@@ -55,7 +55,7 @@
 		"thunbolt/thunbolt": "~1.0.0",
 		"thunbolt/soft-extensions": "~1.0.0",
 		"thunbolt/doctrine-timestamp": "~1.0.0",
-		"thunbolt/user": "~1.0.1",
+		"thunbolt/user": "~1.0.2",
 		"thunbolt/bar": "~1.0.0",
 
 		"thunbolt-module/core": "~1.0.0"
