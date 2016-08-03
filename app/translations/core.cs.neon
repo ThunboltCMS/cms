@@ -100,13 +100,3 @@ timeAgo:
 	days: 'před dnem|před %count% dny|před %count% dny'
 	months: 'před měsícem|před %count% měsíci|před %count% měsíci'
 	years: 'před rokem|před %count% lety|před %count% lety'
-## Admin
-admin:
-	title: 'Administrace'
-	signOut: 'Odhlásit se'
-	memberFrom: 'Člen od'
-	notifications: 'Máte %count% nových notifikací'
-	mainMenu: 'Hlavní menu'
-	profile: 'Profil'
-	skin: 'Vzhled stránky'
-	error: 'Možná se bude chtít vrátit na <a href="%link%">domovskou stránku</a> nebo použijte navigaci.'
