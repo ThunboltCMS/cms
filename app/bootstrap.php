@@ -3,7 +3,7 @@
 require __DIR__ . '/../vendor/autoload.php';
 
 $configurator = new Thunbolt\Configuration\Configuration();
-$bootstrap = new Thunbolt\Bootstrap(__DIR__);
+$bootstrap = new Thunbolt\Bootstrap(__DIR__, $configurator);
 
 $bootstrap->initialize();
 //$configurator->setDebugMode(FALSE);
@@ -18,7 +18,7 @@ $configurator->createRobotLoader()
 
 $configurator->setScanDirs([__DIR__ . '/modules']);
 
-$bootstrap->loadComposerConfig($configurator);
+$bootstrap->loadComposerConfig();
 
 $configurator->addAutoloadConfig(__DIR__ . '/modules/', 'config.neon', 1);
 
