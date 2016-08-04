@@ -30,7 +30,6 @@ class FrontFactory extends FormFactory implements IFormFactory {
 
 		$form->setTranslator($this->translator);
 		$form->setTemplate(__DIR__ . '/templates/bootstrap.latte');
-		$form->setRenderer(new FrontRenderer());
 
 		return $form;
 	}
