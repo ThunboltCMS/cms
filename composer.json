@@ -51,7 +51,7 @@
 		"thunbolt/composer-installer": "^1.0.0",
 		"thunbolt/application": "~1.0.0",
 		"thunbolt/commands": "~1.0.0",
-		"thunbolt/templates": "~1.0.2",
+		"thunbolt/templates": "~1.0.3",
 		"thunbolt/thunbolt": "~1.0.0",
 		"thunbolt/soft-extensions": "~1.0.0",
 		"thunbolt/doctrine-timestamp": "~1.0.0",
