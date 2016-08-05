@@ -11,13 +11,19 @@
 
 		<div class="col-sm-10">
 			{if $input->getOption(type) in [text, select, textarea]}
-				{input $input class => form-control}
+				{php $input->getControlPrototype()->addClass(form-control)}
+				{input $input}
+
 			{elseif $input->getOption(type) === button}
-				{input $input class => "btn btn-default"}
+				{php $input->getControlPrototype()->addClass('btn btn-default')}
+				{input $input}
+
 			{elseif $input->getOption(type) === checkbox}
 				<div class="checkbox">{input $input}</div>
+
 			{elseif $input->getOption(type) === radio}
 				<div class="radio">{input $input}</div>
+
 			{else}
 				{input $input}
 			{/if}
