@@ -49,6 +49,11 @@
 
 	{block scripts}
 		{assets compiled/front.min.js}
+
+		<script>
+			WebChemistry.FormControls.registerNetteAjaxEvent();
+			WebChemistry.FormControls.init();
+		</script>
 	{/block}
 </body>
 </html>
