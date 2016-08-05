@@ -1,11 +1,12 @@
 'use strict';
 (function ($, undefined) {
-    if ($.nette !== undefined) {
-        $.nette.init();
-    }
-    if ($.formErrorRenderer !== undefined) {
-        $.formErrorRenderer.apply();
-    }
+    $.nette.init();
+
+    Thunbolt.FormErrors.addListenerOnChange();
+    Thunbolt.FormErrors.init();
+
+    WebChemistry.FormControls.registerNetteAjaxEvent();
+    WebChemistry.FormControls.init();
 })(jQuery);
 
 
