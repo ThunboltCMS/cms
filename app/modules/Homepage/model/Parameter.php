@@ -1,6 +1,6 @@
 <?php
 
-namespace Entity;
+namespace Model;
 
 use Doctrine\ORM\Mapping as ORM;
 use WebChemistry\Parameters\IEntity;
@@ -15,7 +15,7 @@ class Parameter implements IEntity {
 	public static $strict = TRUE;
 
 	/**
-	 * @ORM\Id
+	 * @ORM\Id()
 	 * @ORM\Column(type="string", length=50)
 	 */
 	protected $id;

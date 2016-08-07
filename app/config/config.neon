@@ -11,7 +11,7 @@ extensions:
 
 settings:
 	paramsSettings:
-		entity: Entity\Parameter
+		entity: Model\Parameter
 
 assets:
 	resources:
@@ -19,9 +19,13 @@ assets:
 
 doctrine:
 	metadata:
-		Entity:
+		Model:
 			- %appDir%/modules
 			- %appDir%/../mod
+
+user:
+    authorizator:
+        enable: no
 
 translation:
 	default: 'cs'
