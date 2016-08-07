@@ -24,7 +24,7 @@ class SignInForm extends BaseControl implements ISignInForm {
 	 * @return Form
 	 */
 	public function createSignIn() {
-		$form = $this->getForm();
+		$form = $this->createForm();
 
 		$form->addText('email', 'core.user.email')
 			->setRequired()
