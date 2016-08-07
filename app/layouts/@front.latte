@@ -40,20 +40,15 @@
 </head>
 <body>
 	<script>document.documentElement.className+=' js';var basePath = {$basePath};</script>
-	<LayoutCoreSocial n:component />
-	<LayoutCoreFlashes n:component />
-	<LayoutCoreSpinner n:component />
+	<LayoutCoreSocial block n:component />
+	<LayoutCoreFlashes block n:component />
+	<LayoutCoreSpinner block n:component />
 
 	<!-- Content -->
 	{include content}
 
 	{block scripts}
 		{assets compiled/front.min.js}
-
-		<script>
-			WebChemistry.FormControls.registerNetteAjaxEvent();
-			WebChemistry.FormControls.init();
-		</script>
 	{/block}
 </body>
 </html>
