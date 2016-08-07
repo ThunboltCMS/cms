@@ -1,8 +1,7 @@
 module.exports = function(grunt) {
     grunt.config.init({
-        netteAssets: {
+        assets: {
             target: {
-                taskName: 'cms',
                 config: 'app/config/assets.yaml',
                 basePath: 'www/'
             }
@@ -16,8 +15,8 @@ module.exports = function(grunt) {
 
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-nette-assets');
+    grunt.loadNpmTasks('grunt-webchemistry-assets');
 
 
-    return grunt.registerTask('default', ['netteAssets', 'uglify', 'cssmin']);
+    return grunt.registerTask('default', ['assets', 'uglify', 'cssmin']);
 };
