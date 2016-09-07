@@ -1,10 +1,9 @@
-log/*
-temp/*
+var/tmp/*
+var/log/*
 vendor/*
-mod/*
+plugins/*
 bin/*
 node_modules
-app/config/composer.json
 !.gitignore
 !.htaccess
 !web.config
@@ -13,4 +12,5 @@ www/components
 composer.lock
 www/assets/*
 !default
-www/mod-assets
+www/plugins
+www/compiled

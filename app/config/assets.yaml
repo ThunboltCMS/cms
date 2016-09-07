@@ -15,6 +15,8 @@ front:
       - "css/main.css"
   js:
     "compiled/front.min.js":
+      ## jQuery
+      - "components/jquery/dist/jquery.min.js"
       ## Bootstrap
       - "components/bootstrap/dist/js/bootstrap.min.js"
       ## Forms
@@ -32,5 +34,3 @@ front:
       - "js/ajax/spinner.js"
       ## Main
       - "js/main.js"
-    "compiled/front.header.min.js":
-      - "components/jquery/dist/jquery.min.js"

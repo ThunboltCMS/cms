@@ -1,4 +1,4 @@
 <?php
 
-$configurator->addConfig(__DIR__ . '/config/mode/development.neon');
-//$configurator->addConfig(__DIR__ . '/config/mode/production.neon');
+$configurator->addConfig(__DIR__ . '/config/environment/development.neon');
+//$configurator->addConfig(__DIR__ . '/config/environment/production.neon');

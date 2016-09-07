@@ -1,0 +1,4 @@
+config: ## variable $config in template, class Thunbolt\Config\Config in application
+	webName: 'Website'
+	webTitle: 'Website: '
+	email: 'admin@example.com'

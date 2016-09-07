@@ -1,0 +1,115 @@
+{* Skeleton *}
+{block form}
+	<form n:name=$form class="form-horizontal">
+		{include ownErrors val => $form->getOwnErrors()}
+
+		{include container val => $form->getComponents()}
+	</form>
+{/block}
+
+{* Controls *}
+{define controlContainer}
+	<div n:if="!$val->getOption(rendered) && $val->getOption(type) !== hidden"
+			n:class="form-group, $val->required ? required, $val->error ? has-error"
+			n:attr="id => $val->getOption(id)">
+		{if $val->getOption(type) === file}
+			{php $val->getControlPrototype()->addClass('ctrl-inline')}
+			{label $val}: {include control val => $val}
+
+		{else}
+			{include control val => $val}
+
+		{/if}
+
+		{include controlError val => $val->error}
+	</div>
+{/define}
+
+{define control}
+	{php $val->setAttribute(placeholder, $val->caption)}
+
+	{input $val}
+{/define}
+
+{* Containers *}
+{define container}
+	{foreach $val as $ctrl}
+		{if $ctrl instanceof Nette\Forms\Container}
+			{include this val => $ctrl->components}
+
+		{elseif $ctrl->getOption(type) === radio}
+			{include radio val => $ctrl}
+
+
+		{elseif $ctrl->getOption(type) === checkbox}
+			{include radio val => $ctrl}
+
+		{else}
+			{include controlContainer val => $ctrl}
+
+		{/if}
+	{/foreach}
+{/define}
+
+{* Specific controls *}
+{define checkbox}
+	<div class="checkbox">
+		<label for="{$val->getHtmlId()}">
+			{$val->getControlPart()} {$val->caption}
+		</label>
+	</div>
+{/define}
+
+{define radio}
+	<div class="radio">
+		<label for="{$val->getHtmlId()}">
+			{$val->getControlPart()} {$val->caption}
+		</label>
+	</div>
+{/define}
+
+{* Errors *}
+{define ownErrors}
+	<ul class="error" n:if="$val">
+		<li n:foreach="$val as $error">{$error}</li>
+	</ul>
+{/define}
+
+{define controlError}
+	<span class=has-error n:ifcontent>{$val}</span>
+{/define}
+
+<form n:name=$form class=form-horizontal>
+	<ul class=error n:if="$form->ownErrors">
+		<li n:foreach="$form->ownErrors as $error">{$error}</li>
+	</ul>
+
+	<div n:foreach="$form->controls as $name => $input"
+			n:if="!$input->getOption(rendered) && $input->getOption(type) !== hidden"
+			n:class="form-group, $input->required ? required, $input->error ? has-error">
+
+		<div class="col-sm-2 control-label">{label $input}</div>
+
+		<div class="col-sm-10">
+			{if $input->getOption(type) in [text, select, textarea]}
+				{php $input->getControlPrototype()->addClass(form-control)}
+				{input $input}
+
+			{elseif $input->getOption(type) === button}
+				{php $input->getControlPrototype()->addClass('btn btn-default')}
+				{input $input}
+
+			{elseif $input->getOption(type) === checkbox}
+				<div class="checkbox">{input $input}</div>
+
+			{elseif $input->getOption(type) === radio}
+				<div class="radio">{input $input}</div>
+
+			{else}
+				{input $input}
+			{/if}
+
+			<span class=has-error n:ifcontent>{$input->error}</span>
+		</div>
+	</div>
+</form>

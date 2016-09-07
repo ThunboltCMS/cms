@@ -33,19 +33,6 @@ date:
 	datetime: 'd.m.Y H:i'
 	date: 'd.m.Y'
 	time: 'H:i'
-error:
-	400:
-		title: 'Špatný požadavek'
-		msg: 'Server nerozumí požadavku, musíte požadavek opravit a poslat znovu.'
-	403:
-		title: 'Nedostatečné oprávnění'
-		msg: 'Nemáte potřebná práva k prohližení této stránky nebo vykonaní akce.'
-	404:
-		title: 'Stránka nebyla nalezena'
-		msg: 'Stránka byla odstraněna nebo neexistuje.'
-	500:
-		title: 'Chyba serveru'
-		msg: 'Na serveru došlo k neočekávané chybě. Prosím zkuste to znovu později.'
 forms:
 	protection: 'Platnost formuláře vypršela, prosím zkuste to znovu.'
 	equal: 'Prosím vložte %s.'

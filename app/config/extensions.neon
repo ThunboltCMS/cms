@@ -1,0 +1,25 @@
+extensions:
+	assets: WebChemistry\Assets\DI\AssetsExtension
+	routers: WebChemistry\Routing\DI\RouterExtension
+	## Kdyby, Doctrine
+	annotations: Kdyby\Annotations\DI\AnnotationsExtension
+	doctrine: Kdyby\Doctrine\DI\OrmExtension
+	console: Kdyby\Console\DI\ConsoleExtension
+	#translation: Kdyby\Translation\DI\TranslationExtension ## optional
+	## Forms
+	form: WebChemistry\Forms\DI\FormsExtension
+	## Thunbolt
+	templates: Thunbolt\Templates\DI\TemplateExtension
+	core: Thunbolt\CoreExtension
+	## WebChemistry
+	images: WebChemistry\Images\DI\ImagesExtension ## optional
+	doctrineHelper: WebChemistry\Forms\DI\DoctrineExtension ## optional
+	widgets: WebChemistry\Widgets\DI\WidgetsExtension ## optional
+	## Thunbolt
+	shortcuts: Thunbolt\Application\DI\ShortCutsExtension
+	commands: Thunbolt\Commands\DI\CommandsExtension ## optional
+	user: Thunbolt\User\DI\UserExtension
+	config: Thunbolt\Config\DI\ConfigExtension
+	localization: Thunbolt\Localization\DI\LocalizationExtension
+	- Thunbolt\Doctrine\DI\TimestampExtension
+	- Thunbolt\Application\DI\ApplicationExtension

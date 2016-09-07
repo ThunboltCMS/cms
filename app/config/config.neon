@@ -1,50 +1,51 @@
 php:
 	date.timezone: Europe/Prague
 
+application:
+	scanDirs: no
+
+annotations:
+	ignore:
+		- isAllowed
+
 session:
 	expiration: 15 days
 	cookiePath: '?->getUrl()->getBasePath()'(@Nette\Http\Request) ## Cookie path same as $basePath
-
-extensions:
-	translation: Kdyby\Translation\DI\TranslationExtension
-	- Thunbolt\Doctrine\DI\TimestampExtension
-
-settings:
-	paramsSettings:
-		entity: Model\Parameter
 
 assets:
 	resources:
 		- '%appDir%/config/assets.yaml'
 
 doctrine:
-	metadata:
-		Model:
-			- %appDir%/modules
-			- %appDir%/../mod
+	defaultRepositoryClassName: Thunbolt\Model\RepositoryContainer
+	types:
+		bit: Doctrine\DBAL\Types\BooleanType
+	filters:
+		soft-deleteable: Gedmo\SoftDeleteable\Filter\SoftDeleteableFilter
+	dql:
+		string:
+			MATCH: DoctrineExtensions\Query\Mysql\MatchAgainst
+			DATE: Thunbolt\Doctrine\Addons\DateFunction
+		numeric:
+			RAND: Thunbolt\Doctrine\Addons\Rand
 
-user:
-    authorizator:
-        enable: no
+#translation:
+#	default: 'cs'
+#	whitelist: [cs]
+#	resolvers:
+#		session: yes
+#	dirs: [] # reset
+#	loaders: [neon]
 
-translation:
-	default: 'cs'
-	whitelist: [cs]
-	dirs:
-		- %appDir%/translations
-		- %appDir%/modules
-		- %appDir%/../mod
-	resolvers:
-		session: yes
-	loaders: [neon]
+routers:
+	main: App\Routers\LocalRouter
 
 form:
 	factories:
 		front: App\Factories\Forms\FrontFactory
 
 shortcuts:
-	home.front: ':Front:Homepage:'
+	front.home: ':Front:Homepage:'
 
 di:
 	debugger: no
-

@@ -1,2 +1,5 @@
 services:
 	- App\Forms\SignInForm
+	templateFormRenderer:
+		class: App\Renderers\TemplateFormRenderer
+		implement: App\Renderers\ITemplateFormRenderer
