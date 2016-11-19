@@ -49,7 +49,7 @@
 		"thunbolt/application": "dev-master",
 		"thunbolt/commands": "~1.0.0",
 		"thunbolt/templates": "dev-master",
-		"thunbolt/thunbolt": "~1.0.0",
+		"thunbolt/thunbolt": "dev-master",
 		"thunbolt/doctrine-timestamp": "dev-master",
 		"thunbolt/user": "dev-master",
 		"thunbolt/bar": "~1.0.0",
