@@ -3,8 +3,8 @@
     z-index: 9999;
 }
 
-.flashes-container .top-right {
-    top: 0px;
+.flashes-container.top-right {
+    top: 0;
     right: 20px;
 }
 
