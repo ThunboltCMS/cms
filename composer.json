@@ -41,6 +41,7 @@
 		"webchemistry/widgets": "~1.0.0",
 		"webchemistry/assets": "dev-master",
 		"webchemistry/utils": "~1.0",
+		"webchemistry/component-macro": "dev-master",
 
 		"thunbolt/config": "dev-master",
 		"thunbolt/composer-installer": "dev-master",
