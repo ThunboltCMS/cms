@@ -17,7 +17,7 @@ assets:
 		- '%appDir%/config/assets.yaml'
 
 doctrine:
-	defaultRepositoryClassName: Thunbolt\Model\RepositoryContainer
+	defaultRepositoryClassName: App\Model\Repository
 	types:
 		bit: Doctrine\DBAL\Types\BooleanType
 	filters:
@@ -34,7 +34,9 @@ doctrine:
 #	whitelist: [cs]
 #	resolvers:
 #		session: yes
-#	dirs: [] # reset
+#	dirs: [
+#       "%appDir%/translations"
+#   ] # reset
 #	loaders: [neon]
 
 routers:

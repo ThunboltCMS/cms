@@ -28,7 +28,6 @@
 
 		"kdyby/doctrine": "dev-master",
 		"kdyby/console": "~2.6",
-		"kdyby/translation": "dev-master",
 
 		"nextras/mail-panel": "~2.3",
 
@@ -42,7 +41,6 @@
 		"webchemistry/widgets": "~1.0.0",
 		"webchemistry/assets": "dev-master",
 		"webchemistry/utils": "~1.0",
-		"webchemistry/component-macro": "~1.0.0",
 
 		"thunbolt/config": "dev-master",
 		"thunbolt/composer-installer": "dev-master",

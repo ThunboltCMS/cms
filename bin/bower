@@ -1,0 +1,15 @@
+#!/usr/bin/php
+<?php
+
+require __DIR__ . '/libs/bootstrap.php';
+
+if (existScript('bower')) {
+	$executor = 'bower';
+} else {
+	if (!file_exists($executor = __DIR__ . '/../node_modules/.bin/bower')) {
+		error('Cannot run bower. Not installed.');
+	}
+}
+
+chdir(__DIR__ . '/..');
+system($executor . ' install');

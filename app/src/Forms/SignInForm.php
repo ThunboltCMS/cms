@@ -3,7 +3,7 @@
 namespace App\Forms;
 
 use Nette\Utils\ArrayHash;
-use Thunbolt\Forms\BaseControl;
+use Thunbolt\Forms\BaseForm;
 use Thunbolt\Forms\FormArgs;
 use Thunbolt\Localization\TranslatorProvider;
 use Thunbolt\User\BadPasswordException;
@@ -12,7 +12,7 @@ use Thunbolt\User\UserNotFoundException;
 use WebChemistry\Forms\Form;
 use Thunbolt\User\User;
 
-class SignInForm extends BaseControl implements ISignInForm {
+class SignInForm extends BaseForm implements ISignInForm {
 
 	/** @var User */
 	private $user;

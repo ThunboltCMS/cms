@@ -1,0 +1,37 @@
+$ajaxBackground: rgba(102, 204, 255, 0.5);
+
+#ajax-spinner {
+	position:fixed;
+	display:none;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	z-index: 99999999999999999;
+	height: 100%;
+	background: $ajaxBackground;
+
+	&.show {
+		display:block;
+}
+	img {
+		height: 80px;
+}
+	.img-wrapper {
+		text-align:center;
+		top: 50%;
+		margin-top: -40px;
+		position:relative;
+}
+
+	@media (max-width: 600px)
+{
+	img {
+		height: 40px;
+}
+	.img-wrapper{
+		margin-top: -20px;
+} }
+
+}
