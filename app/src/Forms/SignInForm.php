@@ -17,13 +17,10 @@ class SignInForm extends BaseForm implements ISignInForm {
 	/** @var User */
 	private $user;
 
-	/** @var TranslatorProvider */
-	private $translatorProvider;
-
-	public function __construct(FormArgs $formArgs, User $user, TranslatorProvider $translatorProvider) {
+	public function __construct(FormArgs $formArgs, User $user) {
 		parent::__construct($formArgs);
+
 		$this->user = $user;
-		$this->translatorProvider = $translatorProvider;
 	}
 
 	/**
