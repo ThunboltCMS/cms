@@ -8,24 +8,24 @@
 				</div>
 			</div>
 			<div class="notify-text">
-				<h3>{ifset Thunbolt\Translation\Translation::$flashes[$flash->type]}{Thunbolt\Translation\Translation::$flashes[$flash->type]|firstUpper}{else}{$flash->type|firstUpper}{/ifset}</h3>
+				<h3>{_'core.flashes.' . $flash->type|firstUpper}</h3>
 				<p>{$flash->message}</p>
 			</div>
 			<div class="clearfix"></div>
 		</div>
 	</div>
 	<script n:if="$flashes">
-		$(document).ready(function () {
-			$('.flashes-container .notify').each(function (index) {
-				var time = 6e3 * (index + 1);
-				var that = this;
+        $(document).ready(function () {
+            $('.flashes-container .notify').each(function (index) {
+                var time = 6e3 * (index + 1);
+                var that = this;
 
-				setTimeout(function () {
-					$(that).fadeOut(500, function () {
-						$(this).remove();
-					});
-				}, time);
-			});
-		});
+                setTimeout(function () {
+                    $(that).fadeOut(500, function () {
+                        $(this).remove();
+                    });
+                }, time);
+            });
+        });
 	</script>
 </div>
