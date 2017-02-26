@@ -23,7 +23,15 @@ function warning($msg) {
 }
 
 function info($msg) {
-	fprintf(STDOUT, $msg);
+	fprintf(STDOUT, $msg . "\n");
+}
+
+function bold($msg) {
+	return "\033[1m" . $msg . "\033[22m";
+}
+
+function command($msg) {
+	fprintf(STDOUT, "\033[35m" . bold($msg) . "\033[39m\n");
 }
 
 function existScript($name) {
