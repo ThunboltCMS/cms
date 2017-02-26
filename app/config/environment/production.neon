@@ -9,3 +9,9 @@ assets:
 
 translation:
 	debugger: no
+
+doctrine:
+	host: localhost
+	user: root
+	password: ''
+	dbname: test
