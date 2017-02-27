@@ -1,17 +1,1 @@
-#!/usr/bin/php
-<?php
-
-require __DIR__ . '/libs/bootstrap.php';
-
-if (php_sapi_name() !== 'cli') {
-	error('Run script in terminal.');
-}
-
-if (!existScript('npm')) {
-	warning('npm script not exists. Ending.');
-	exit(0);
-}
-if (!file_exists(__DIR__ . '/../node_modules')) {
-	info('Installing npm...');
-	system('npm install');
-}
+../vendor/thunbolt/bin/bin/init

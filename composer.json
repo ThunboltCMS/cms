@@ -54,7 +54,8 @@
 		"thunbolt/bar": "~1.0.0",
 		"thunbolt/core": "dev-master",
 		"thunbolt/bundles": "dev-master",
-		"thunbolt/localization": "dev-master"
+		"thunbolt/localization": "dev-master",
+		"thunbolt/bin": "dev-master"
 	},
 	"autoload": {
 		"psr-4": {
@@ -63,5 +64,8 @@
 		}
 	},
 	"minimum-stability": "dev",
-	"prefer-stable": true
+	"prefer-stable": true,
+	"config": {
+		"bin-dir": "bin"
+	}
 }

@@ -1,15 +1,1 @@
-#!/usr/bin/php
-<?php
-
-require __DIR__ . '/libs/bootstrap.php';
-
-if (existScript('grunt')) {
-	$executor = 'grunt';
-} else {
-	if (!file_exists($executor = __DIR__ . '/../node_modules/grunt-cli/bin/grunt')) {
-		error('Cannot run grunt. Not installed.');
-	}
-}
-
-chdir(__DIR__ . '/..');
-system($executor);
+../vendor/thunbolt/bin/bin/minify

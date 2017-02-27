@@ -2,6 +2,7 @@ var/tmp/*
 var/log/*
 vendor/*
 plugins/*
+bin/*
 node_modules
 !.gitignore
 !.htaccess
