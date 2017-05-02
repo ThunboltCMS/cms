@@ -14,18 +14,4 @@
 			<div class="clearfix"></div>
 		</div>
 	</div>
-	<script n:if="$flashes">
-        $(document).ready(function () {
-            $('.flashes-container .notify').each(function (index) {
-                var time = 6e3 * (index + 1);
-                var that = this;
-
-                setTimeout(function () {
-                    $(that).fadeOut(500, function () {
-                        $(this).remove();
-                    });
-                }, time);
-            });
-        });
-	</script>
 </div>
