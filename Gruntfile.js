@@ -2,7 +2,7 @@ module.exports = function(grunt) {
     grunt.config.init({
         assets: {
             target: {
-                config: 'app/config/assets.yaml',
+                config: 'app/config/assets.neon',
                 basePath: 'www/'
             }
         },
