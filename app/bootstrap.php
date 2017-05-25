@@ -6,7 +6,6 @@ $configurator = new Nette\Configurator();
 //$configurator->setDebugMode(FALSE);
 
 $bootstrap = new Thunbolt\Bootstrap(__DIR__, $configurator);
-
 $bootstrap->initialize();
 
 $configurator->addConfig(__DIR__ . '/config/extensions.neon');
