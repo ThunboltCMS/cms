@@ -69,13 +69,6 @@ user:
 	signIn: 'Přihlásit'
 	notExists: 'Uživatel neexistuje.'
 	wrongPassword: 'Heslo je špatně zadáno.'
-flashes:
-	error: 'Chyba'
-	warning: 'Varování'
-	success: 'Úspěch'
-	info: 'Informace'
-	roll: 'Rolovat'
-	remove: 'Odstranit'
 requirements:
 	loggedOut: 'Tato akce je povolena pouze odhlašeným uživatelům.'
 	loggedIn: 'Tato akce je povolena pouze přihlášeným uživatelům.'
