@@ -26,10 +26,12 @@
 	{block head}{/block}
 </head>
 <body>
-	<script>document.documentElement.className+=' js';var basePath = {$basePath};</script>
-
+	<script>document.documentElement.className+=' js';var basePath={$basePath};</script>
+	<Flashes n:component />
 	<!-- Content -->
-	{include content}
+	<div class="container">
+		{include content}
+	</div>
 
 	{assets 'compiled/front.min.js', async, defer, ifNotMinified}
 </body>

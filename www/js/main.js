@@ -7,23 +7,31 @@
     Thunbolt.FormErrors.addListenerOnChange();
     Thunbolt.FormErrors.init();
 
-    // form controls registration
-    WebChemistry.FormControls.registerNetteAjaxEvent();
-    WebChemistry.FormControls.init();
-
-    // document - ready
-    $(document).ready(function () {
-        // flashes hide effect
-        $('.flashes-container .notify').each(function (index) {
-            var time = 6e3 * (index + 1);
-            var that = this;
-
-            setTimeout(function () {
-                $(that).fadeOut(500, function () {
-                    $(this).remove();
-                });
-            }, time);
+    // flashes
+    function hideFlash(id) {
+        if (!id) {
+            id = $('.flashes-container .flash-message:first-child');
+        }
+        id.fadeOut(500, function () {
+            $(this).remove();
+            if ($('.flashes-container > div').length === 0) {
+                $('.flashes-container').remove();
+            }
         });
+    }
+    $('.flashes-container .flash-message').each(function (index) {
+        var time = 5e3 * (index + 1);
+        var that = $(this);
+
+        setTimeout(function () {
+            hideFlash(that);
+        }, time);
+    });
+    $('.flashes-container .flash-close-btn, .flashes-container .flash-message').on('click', function (e) {
+        hideFlash($(this).closest('.flash-message'));
+        e.preventDefault();
+
+        return false;
     });
 })(jQuery);
 

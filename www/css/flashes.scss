@@ -1,0 +1,76 @@
+$position: right;
+$colors: (
+		success: #2c8030,
+		info: #1779ba,
+		error: #ff1f33 43%,
+		warning: #ff9d30 40%,
+);
+$textColor: #000;
+$spaceTop: 2rem;
+
+.flashes-container {
+	@if $position == right {
+		margin-left: auto;
+		margin-right: $spaceTop;
+	} @elseif $position == left {
+		margin-left: $spaceTop;
+	} @elseif $position == center {
+		margin: 0 auto;
+	}
+
+	position: relative;
+	z-index: 99999999;
+	max-width: 500px;
+	right: 0;
+	margin-top: $spaceTop;
+	.flash-message {
+		position: relative;
+		display: inline-block;
+		padding: 1.3rem;
+		margin-top: $spaceTop;
+		&.first {
+			margin-top: 0;
+		}
+		padding-right: 3.7rem;
+		span {
+			color: $textColor;
+		}
+
+		@each $class, $color in $colors {
+			&.#{$class} {
+				$size: 50%;
+				@if length($color) != 1 {
+					$size: nth($color, 2);
+					$color: nth($color, 1);
+				}
+				border: 1px solid lighten($color, $size - 10%);
+				border-left: 0.3125rem solid $color;
+				background: lighten($color, $size);
+				.flash-close-btn > span {
+					color: $color;
+				}
+				&:hover {
+					background: lighten($color, $size - 5%);
+					cursor: pointer;
+				}
+			}
+		}
+		.flash-close-btn {
+			position: absolute;
+			right: 7px;
+			top: 0;
+			font-size: 26px;
+			opacity: 0.6;
+			&:hover {
+				text-decoration: none;
+				opacity: 1;
+				cursor: pointer;
+			}
+		}
+		img {
+			margin-right: 0.3rem;
+			position: relative;
+			top: -4px;
+		}
+	}
+}

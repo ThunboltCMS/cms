@@ -1,15 +1,7 @@
 {define favicon}
-	{if $settings->websiteFavicon}
-		<link rel="icon" type="image/png" href="{img $settings->websiteFavicon, '16x16', 'exact'}">
-		<link rel="apple-touch-icon" href="{img $settings->websiteFavicon, '57x57', 'exact'}">
-		<link rel="apple-touch-icon" sizes="57x57" href="{img $settings->websiteFavicon, '57x57', 'exact'}">
-		<link rel="apple-touch-icon" sizes="72x72" href="{img $settings->websiteFavicon, '72x72', 'exact'}">
-		<link rel="apple-touch-icon" sizes="76x76" href="{img $settings->websiteFavicon, '76x76', 'exact'}">
-		<link rel="apple-touch-icon" sizes="114x114" href="{img $settings->websiteFavicon, '114x114', 'exact'}">
-		<link rel="apple-touch-icon" sizes="120x120" href="{img $settings->websiteFavicon, '120x120', 'exact'}">
-		<link rel="apple-touch-icon" sizes="144x144" href="{img $settings->websiteFavicon, '144x144', 'exact'}">
-		<link rel="apple-touch-icon" sizes="152x152" href="{img $settings->websiteFavicon, '152x152', 'exact'}">
-	{/if}
+	{ifset $settings->websiteFavicon}
+		<link rel="icon" type="image/png" href="{$basePath}/images/{$settings->websiteFavicon}">
+	{/ifset}
 {/define}
 
 {define spinner}
