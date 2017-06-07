@@ -1,28 +1,30 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Factories\Forms;
 
 use App\Renderers\ITemplateFormRenderer;
+use App\UI\Form;
 use Nette\Localization\ITranslator;
-use WebChemistry\Forms\Factory\DefaultFormFactory;
-use WebChemistry\Forms\Form;
 
-class FrontFactory extends DefaultFormFactory {
+class FrontFactory implements IFormFactory {
 
 	/** @var ITemplateFormRenderer */
 	private $templateFormRenderer;
 
-	public function __construct(ITemplateFormRenderer $templateFormRenderer, ITranslator $translator = NULL) {
-		parent::__construct($translator);
+	/** @var ITranslator */
+	private $translator;
+
+	public function __construct(ITemplateFormRenderer $templateFormRenderer, ?ITranslator $translator = NULL) {
 		$this->templateFormRenderer = $templateFormRenderer;
+		$this->translator = $translator;
 	}
 
-	/**
-	 * @return Form
-	 */
-	public function create() {
-		$form = parent::create();
+	public function create(): Form {
+		$form = new Form();
 
+		$form->setTranslator($this->translator);
 		$form->setRenderer($this->templateFormRenderer->create(__DIR__ . '/templates/bootstrap.latte'));
 
 		return $form;

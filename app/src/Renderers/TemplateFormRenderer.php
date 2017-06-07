@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Renderers;
 
 use Nette\Application\UI\ITemplateFactory;
@@ -14,12 +16,12 @@ class TemplateFormRenderer implements IFormRenderer {
 	/** @var string */
 	private $file;
 
-	public function __construct(ITemplateFactory $templateFactory, $file) {
+	public function __construct(ITemplateFactory $templateFactory, string $file) {
 		$this->templateFactory = $templateFactory;
 		$this->file = $file;
 	}
 
-	public function render(Form $form) {
+	public function render(Form $form): string {
 		$template = $this->templateFactory->createTemplate();
 
 		$template->setFile($this->file);

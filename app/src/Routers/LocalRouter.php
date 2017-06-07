@@ -9,11 +9,7 @@ use WebChemistry\Utils\Strings;
 
 class LocalRouter implements IRouter {
 
-	/**
-	 * @param RouteManager $routeManager
-	 * @return void
-	 */
-	public function createRouter(RouteManager $routeManager) {
+	public function createRouter(RouteManager $routeManager): void {
 		$routeManager->addStyle('name');
 		$routeManager->setStyleProperty('name', Route::FILTER_OUT, function($url) {
 			return Strings::webalize($url);

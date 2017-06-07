@@ -19,7 +19,7 @@ class ErrorPresenter implements IPresenter {
 	/**
 	 * @return Nette\Application\IResponse
 	 */
-	public function run(Nette\Application\Request $request) {
+	public function run(Nette\Application\Request $request): Nette\Application\IResponse {
 		$e = $request->getParameter('exception');
 		if ($e instanceof Nette\Application\BadRequestException) {
 			// $this->logger->log("HTTP code {$e->getCode()}: {$e->getMessage()} in {$e->getFile()}:{$e->getLine()}", 'access');

@@ -1,12 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Presenters;
 
 use Thunbolt\Application\Presenter;
-use WebChemistry\Forms\Traits\TSuggestion;
 
 abstract class BasePresenter extends Presenter {
 
-	use TSuggestion;
 
 }
