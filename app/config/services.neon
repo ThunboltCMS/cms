@@ -1,5 +1,14 @@
+decorator:
+	App\Forms\BaseForm:
+		setup:
+			- setFactory
+			- setEntityManager
+
 services:
 	- App\Forms\SignInForm
 	templateFormRenderer:
 		class: App\Renderers\TemplateFormRenderer
 		implement: App\Renderers\ITemplateFormRenderer
+	frontFormFactory:
+		class: App\Factories\Forms\IFormFactory
+		factory: App\Factories\Forms\FrontFactory
