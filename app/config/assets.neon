@@ -5,10 +5,6 @@ front:
 			## Bootstrap
 			- "components/bootstrap/dist/css/bootstrap.min.css"
 			- "components/bootstrap/dist/css/bootstrap-theme.min.css"
-			## Forms
-			- "components/datetimepicker/jquery.datetimepicker.css"
-			- "components/jquery.tagsinput/src/jquery.tagsinput.css"
-			- "components/EasyAutocomplete/dist/easy-autocomplete.css"
 			## Main
 			- "css/flashes.css"
 			- "css/spinner.css"
@@ -21,13 +17,6 @@ front:
 			- "components/bootstrap/dist/js/bootstrap.min.js"
 			## Forms
 			- "components/nette-forms/src/assets/netteForms.js"
-			- "components/jquery.inputmask/dist/min/inputmask/inputmask.min.js"
-			- "components/jquery.inputmask/dist/min/inputmask/inputmask.regex.extensions.min.js"
-			- "components/jquery.inputmask/dist/min/inputmask/jquery.inputmask.min.js"
-			- "components/datetimepicker/build/jquery.datetimepicker.full.min.js"
-			- "components/jquery.tagsinput/src/jquery.tagsinput.js"
-			- "components/EasyAutocomplete/dist/jquery.easy-autocomplete.min.js"
-			- "components/webchemistry-form-controls/dist/form.controls.js"
 			## Ajax
 			- "components/thunbolt/dist/thunbolt.js"
 			- "components/nette.ajax.js/nette.ajax.js"
