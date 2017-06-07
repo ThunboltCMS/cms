@@ -11,11 +11,11 @@ annotations:
 
 session:
 	expiration: 15 days
-	cookiePath: '?->getUrl()->getBasePath()'(@Nette\Http\Request) ## Cookie path same as $basePath
+	cookiePath: '?->getUrl()->getBasePath()'(@Nette\Http\IRequest) ## Cookie path same as $basePath
 
 assets:
 	resources:
-		- '%appDir%/config/assets.yaml'
+		- '%appDir%/config/assets.neon'
 
 doctrine:
 	defaultRepositoryClassName: App\Model\Repository
@@ -42,13 +42,6 @@ doctrine:
 
 routers:
 	main: App\Routers\LocalRouter
-
-form:
-	factories:
-		front: App\Factories\Forms\FrontFactory
-
-shortcuts:
-	front.home: ':Front:Homepage:'
 
 di:
 	debugger: no
