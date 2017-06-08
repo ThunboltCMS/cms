@@ -44,7 +44,6 @@
 		"thunbolt/application": "dev-master",
 		"thunbolt/templates": "dev-master",
 		"thunbolt/thunbolt": "dev-master",
-		"thunbolt/doctrine-timestamp": "dev-master",
 		"thunbolt/user": "dev-master",
 		"thunbolt/bar": "dev-master",
 		"thunbolt/core": "dev-master",

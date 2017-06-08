@@ -15,5 +15,4 @@ extensions:
 	user: Thunbolt\User\DI\UserExtension
 	config: Thunbolt\Config\DI\ConfigExtension
 	localization: Thunbolt\Localization\DI\LocalizationExtension
-	- Thunbolt\Doctrine\DI\TimestampExtension
 	- Thunbolt\Application\DI\ApplicationExtension
