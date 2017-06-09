@@ -37,9 +37,9 @@ class SignInForm extends BaseForm implements ISignInForm {
 
 	public function successSignIn(Form $form, array $values): void {
 		if ($values['remember']) {
-			$this->user->setExpiration('14 days', FALSE);
+			$this->user->setExpiration('14 days');
 		} else {
-			$this->user->setExpiration('20 minutes', TRUE);
+			$this->user->setExpiration('20 minutes');
 		}
 
 		try {
