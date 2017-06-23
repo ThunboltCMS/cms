@@ -1,4 +1,7 @@
 config: ## variable $config in template
-	webName: 'Website'
-	webTitle: 'Website: '
-	email: 'admin@example.com'
+	website:
+		name: 'Website'
+		title: 'Website: '
+		email: 'admin@example.com'
+		description: ''
+		keywords: ''

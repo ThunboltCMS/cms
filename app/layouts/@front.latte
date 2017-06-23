@@ -5,14 +5,16 @@
 <!--[if gt IE 8]><!--> <html lang="cs-CZ"> <!--<![endif]-->
 <head>
 	<title n:ifset="#setTitle">{include #setTitle|stripHtml|trim}</title>
-	<title n:ifset="#title">{$config[webTitle]}{include #title|stripHtml|trim}</title>
+	<title n:ifset="#title">{$config[website][title]}{include #title|stripHtml|trim}</title>
+
+	<meta n:ifset="$nofollow" name="robots" content="nofollow">
 
 	{block meta}
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-		<meta name="description" content="{block description|stripHtml|trim}{/block}">
-		<meta n:ifset="$nofollow" name="robots" content="nofollow">
+		<meta name="description" content="{block description|stripHtml|trim}{$config[website][description]}{/block}">
+		<meta name="keywords" content="{block keywords|stripHtml|trip}{$config[website][keywords]}{/block}">
 	{/block}
 
 	{block styles}
@@ -22,8 +24,11 @@
 	{block head}{/block}
 </head>
 <body>
-	<script>document.documentElement.className+=' js';var basePath={$basePath};</script>
+	{block init}
+		<script>document.documentElement.className+=' js';var basePath={$basePath};</script>
+	{/block}
 	<Flashes n:component />
+
 	<!-- Content -->
 	<div class="container">
 		{include content}
