@@ -19,10 +19,6 @@
 		{assets 'compiled/front.min.css'}
 	{/block}
 
-	{block scripts}
-		{assets 'compiled/front.min.js', async, defer, ifMinified}
-	{/block}
-
 	{block head}{/block}
 </head>
 <body>
@@ -33,6 +29,8 @@
 		{include content}
 	</div>
 
-	{assets 'compiled/front.min.js', async, defer, ifNotMinified}
+	{block scripts}
+		{assets 'compiled/front.min.js'}
+	{/block}
 </body>
 </html>
