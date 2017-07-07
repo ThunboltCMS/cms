@@ -5,3 +5,4 @@ config: ## variable $config in template
 		email: 'admin@example.com'
 		description: ''
 		keywords: ''
+		lang: 'cs'
