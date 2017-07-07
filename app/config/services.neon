@@ -7,6 +7,4 @@ decorator:
 services:
 	- App\Model\UserDAO
 	- App\Forms\SignInForm
-	frontFormFactory:
-		class: App\Factories\Forms\IFormFactory
-		factory: App\Factories\Forms\FrontFactory
+	- App\Factories\Forms\FrontFactory
