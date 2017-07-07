@@ -15,7 +15,7 @@
 
 		{if $val->getOption(type) === file}
 			{php $val->getControlPrototype()->addClass('ctrl-inline')}
-			{label $val}: {include control val => $val}
+			{include control val => $val}
 
 		{elseif $ctrl->getOption(type) === radio}
 			{include radio val => $ctrl}
