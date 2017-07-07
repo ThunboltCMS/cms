@@ -6,6 +6,6 @@ namespace App\UI;
 
 use Nette\Application\UI\Form as NetteForm;
 
-class Form extends NetteForm {
+final class Form extends NetteForm {
 
 }

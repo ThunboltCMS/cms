@@ -8,7 +8,7 @@ use Thunbolt\ITemplateFormRenderer;
 use App\UI\Form;
 use Nette\Localization\ITranslator;
 
-class FrontFactory implements IFormFactory {
+final class FrontFactory implements IFormFactory {
 
 	/** @var ITemplateFormRenderer */
 	private $templateFormRenderer;

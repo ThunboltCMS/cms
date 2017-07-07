@@ -8,7 +8,7 @@ use Thunbolt\User\Interfaces\ISignInForm;
 use Thunbolt\User\UserNotFoundException;
 use Thunbolt\User\User;
 
-class SignInForm extends BaseForm implements ISignInForm {
+final class SignInForm extends BaseForm implements ISignInForm {
 
 	/** @var User */
 	private $user;

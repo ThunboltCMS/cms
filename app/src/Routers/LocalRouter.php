@@ -7,7 +7,7 @@ use WebChemistry\Routing\IRouter;
 use WebChemistry\Routing\RouteManager;
 use WebChemistry\Utils\Strings;
 
-class LocalRouter implements IRouter {
+final class LocalRouter implements IRouter {
 
 	public function createRouter(RouteManager $routeManager): void {
 		$routeManager->addStyle('name');
