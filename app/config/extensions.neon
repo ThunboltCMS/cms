@@ -16,3 +16,4 @@ extensions:
 	config: Thunbolt\Config\DI\ConfigExtension
 	localization: Thunbolt\Localization\DI\LocalizationExtension
 	- Thunbolt\Application\DI\ApplicationExtension
+	- Thunbolt\DI\TemplateFormExtension

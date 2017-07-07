@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Factories\Forms;
 
-use App\Renderers\ITemplateFormRenderer;
+use Thunbolt\ITemplateFormRenderer;
 use App\UI\Form;
 use Nette\Localization\ITranslator;
 

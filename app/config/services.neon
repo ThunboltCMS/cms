@@ -7,9 +7,6 @@ decorator:
 services:
 	- App\Model\UserDAO
 	- App\Forms\SignInForm
-	templateFormRenderer:
-		class: App\Renderers\TemplateFormRenderer
-		implement: App\Renderers\ITemplateFormRenderer
 	frontFormFactory:
 		class: App\Factories\Forms\IFormFactory
 		factory: App\Factories\Forms\FrontFactory

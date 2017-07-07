@@ -49,7 +49,8 @@
 		"thunbolt/core": "dev-master",
 		"thunbolt/bundles": "dev-master",
 		"thunbolt/localization": "dev-master",
-		"thunbolt/bin": "dev-master"
+		"thunbolt/bin": "dev-master",
+		"thunbolt/template-form-renderer": "dev-master"
 	},
 	"autoload": {
 		"psr-4": {
