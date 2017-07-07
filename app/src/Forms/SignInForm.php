@@ -20,7 +20,7 @@ final class SignInForm extends BaseForm implements ISignInForm {
 	public function createSignIn(): Form {
 		$form = $this->create();
 
-		$form->addText('email', 'core.user.email')
+		$form->addText('name', 'core.user.email')
 			->setRequired()
 			->addRule($form::EMAIL);
 
