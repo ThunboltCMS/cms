@@ -8,9 +8,8 @@ node_modules
 !.htaccess
 !web.config
 .idea
-www/components
+www/assets/bower-components/
 composer.lock
-www/assets/*
 !default
-www/plugins
-www/compiled
+www/plugin-assets
+www/assets/minified/
