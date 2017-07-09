@@ -1,2 +1,2 @@
 bundles:
-	app: AppBundle\DI\AppBundleExtension
+	app: AppBundle\AppBundle
