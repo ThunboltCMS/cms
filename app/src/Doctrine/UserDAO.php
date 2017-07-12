@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Model;
+namespace App\Doctrine;
 
 use Doctrine\ORM\EntityManager;
 use Thunbolt\User\Interfaces\IUserDAO;

@@ -5,6 +5,6 @@ decorator:
 			- setEntityManager
 
 services:
-	- App\Model\UserDAO
+	- App\Doctrine\UserDAO
 	- App\Forms\SignInForm
 	- App\Factories\Forms\FrontFactory
