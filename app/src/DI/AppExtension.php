@@ -12,14 +12,15 @@ final class AppExtension extends CompilerExtension {
 	public function loadConfiguration(): void {
 		$builder = $this->getContainerBuilder();
 
-		$builder->addDefinition($this->prefix('filterLoader'))->setClass(FilterLoader::class);
+		$builder->addDefinition($this->prefix('filterLoader'))
+			->setClass(FilterLoader::class);
 	}
 
 	public function beforeCompile(): void {
 		$builder = $this->getContainerBuilder();
 
 		$builder->getDefinition('latte.latteFactory')
-			->addSetup('?->onCompile[] = function ($engine) { $engine->addFilter(null, [?, "loader"]); }', [
+			->addSetup('?->addFilter(null, [?, "loader"]);', [
 				'@self',
 				$this->prefix('@filterLoader'),
 			]);
