@@ -1,4 +1,5 @@
 extensions:
+	app: App\DI\AppExtension
 	assets: WebChemistry\Assets\DI\AssetsExtension
 	routers: WebChemistry\Routing\DI\RouterExtension
 	## Kdyby, Doctrine
