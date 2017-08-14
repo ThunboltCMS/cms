@@ -3,6 +3,9 @@ decorator:
 		setup:
 			- setFactory
 			- setEntityManager
+	App\Forms\BaseFormControl:
+		setup:
+			- injectComponents
 
 services:
 	- App\Doctrine\UserDAO
