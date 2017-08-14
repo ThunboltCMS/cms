@@ -6,7 +6,7 @@ namespace App\Doctrine;
 
 use Doctrine\ORM\EntityManager;
 use Thunbolt\User\Interfaces\IUserDAO;
-use Thunbolt\User\Interfaces\IUserModel;
+use Thunbolt\User\Interfaces\IUserEntity;
 use Thunbolt\User\Interfaces\IUserRepository;
 
 class UserDAO implements IUserDAO {
@@ -18,8 +18,8 @@ class UserDAO implements IUserDAO {
 		$this->em = $em;
 	}
 
-	public function merge(IUserModel $model): void {
-		$this->em->merge($model);
+	public function merge(IUserEntity $entity): void {
+		$this->em->merge($entity);
 		$this->em->flush();
 	}
 

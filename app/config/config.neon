@@ -18,7 +18,7 @@ assets:
 		- '%appDir%/config/assets.neon'
 
 doctrine:
-	defaultRepositoryClassName: App\Model\Repository
+	defaultRepositoryClassName: App\Doctrine\Repository
 	types:
 		bit: Doctrine\DBAL\Types\BooleanType
 	filters:

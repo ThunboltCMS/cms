@@ -13,7 +13,6 @@ front:
 			- "%bower%/bootstrap/dist/css/bootstrap-theme.min.css"
 			## Main
 			- "%css%/flashes.css"
-			- "%css%/spinner.css"
 			- "%css%/main.css"
 	js:
 		"%minified%/front.min.js":
@@ -24,8 +23,6 @@ front:
 			## Forms
 			- "%bower%/nette-forms/src/assets/netteForms.js"
 			## Ajax
-			- "%bower%/thunbolt/dist/thunbolt.js"
 			- "%bower%/nette.ajax.js/nette.ajax.js"
-			- "%js%/ajax/spinner.js"
 			## Main
 			- "%js%/main.js"

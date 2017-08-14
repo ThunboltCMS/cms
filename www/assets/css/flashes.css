@@ -1,70 +1,182 @@
-.flashes-container {
-  margin-left: auto;
-  margin-right: 2rem;
-  position: relative;
-  z-index: 99999999;
-  max-width: 500px;
-  right: 0;
-  margin-top: 2rem; }
-  .flashes-container .flash-message {
-    position: relative;
-    display: inline-block;
-    padding: 1.3rem;
-    margin-top: 2rem;
-    padding-right: 3.7rem; }
-    .flashes-container .flash-message.first {
-      margin-top: 0; }
-    .flashes-container .flash-message span {
-      color: #000; }
-    .flashes-container .flash-message.success {
-      border: 1px solid #9bdd9e;
-      border-left: 0.3125rem solid #2c8030;
-      background: #c1eac3; }
-      .flashes-container .flash-message.success .flash-close-btn > span {
-        color: #2c8030; }
-      .flashes-container .flash-message.success:hover {
-        background: #aee3b1;
-        cursor: pointer; }
-    .flashes-container .flash-message.info {
-      border: 1px solid #a9d6f4;
-      border-left: 0.3125rem solid #1779ba;
-      background: #d6ecfa; }
-      .flashes-container .flash-message.info .flash-close-btn > span {
-        color: #1779ba; }
-      .flashes-container .flash-message.info:hover {
-        background: #bfe1f7;
-        cursor: pointer; }
-    .flashes-container .flash-message.error {
-      border: 1px solid #ffc7cc;
-      border-left: 0.3125rem solid #ff1f33;
-      background: #fffafb; }
-      .flashes-container .flash-message.error .flash-close-btn > span {
-        color: #ff1f33; }
-      .flashes-container .flash-message.error:hover {
-        background: #ffe1e3;
-        cursor: pointer; }
-    .flashes-container .flash-message.warning {
-      border: 1px solid #ffe5c9;
-      border-left: 0.3125rem solid #ff9d30;
-      background: #fffefc; }
-      .flashes-container .flash-message.warning .flash-close-btn > span {
-        color: #ff9d30; }
-      .flashes-container .flash-message.warning:hover {
-        background: #fff2e3;
-        cursor: pointer; }
-    .flashes-container .flash-message .flash-close-btn {
-      position: absolute;
-      right: 7px;
-      top: 0;
-      font-size: 26px;
-      opacity: 0.6; }
-      .flashes-container .flash-message .flash-close-btn:hover {
-        text-decoration: none;
-        opacity: 1;
-        cursor: pointer; }
-    .flashes-container .flash-message img {
-      margin-right: 0.3rem;
-      position: relative;
-      top: -4px; }
+.flashes-wrapper {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 101; }
+  .flashes-wrapper > div {
+    max-width: 500px;
+    margin: 0 auto; }
+  .flashes-wrapper .flash {
+    -webkit-animation: bounceIn 1s;
+    -moz-animation: bounceIn 1s;
+    -ms-animation: bounceIn 1s;
+    -o-animation: bounceIn 1s;
+    animation: bounceIn 1s;
+    margin-top: 20px;
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px; }
+    .flashes-wrapper .flash.hide-flash {
+      display: none; }
+    .flashes-wrapper .flash.hide-effect {
+      -webkit-animation: bounceOut 1s;
+      -moz-animation: bounceOut 1s;
+      -ms-animation: bounceOut 1s;
+      -o-animation: bounceOut 1s;
+      animation: bounceOut 1s; }
+    .flashes-wrapper .flash.error {
+      color: #a94442;
+      background-color: #f2dede;
+      border-color: #ebccd1; }
+    .flashes-wrapper .flash.success {
+      color: #3c763d;
+      background-color: #dff0d8;
+      border-color: #d6e9c6; }
+    .flashes-wrapper .flash.warning {
+      color: #8a6d3b;
+      background-color: #fcf8e3;
+      border-color: #faebcc; }
+    .flashes-wrapper .flash.info {
+      color: #31708f;
+      background-color: #d9edf7;
+      border-color: #bce8f1; }
+
+@-webkit-keyframes bounceIn {
+  from, 20%, 40%, 60%, 80%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  0% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3); }
+  20% {
+    transform: scale3d(1.1, 1.1, 1.1); }
+  40% {
+    transform: scale3d(0.9, 0.9, 0.9); }
+  60% {
+    opacity: 1;
+    transform: scale3d(1.03, 1.03, 1.03); }
+  80% {
+    transform: scale3d(0.97, 0.97, 0.97); }
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1); } }
+@-moz-keyframes bounceIn {
+  from, 20%, 40%, 60%, 80%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  0% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3); }
+  20% {
+    transform: scale3d(1.1, 1.1, 1.1); }
+  40% {
+    transform: scale3d(0.9, 0.9, 0.9); }
+  60% {
+    opacity: 1;
+    transform: scale3d(1.03, 1.03, 1.03); }
+  80% {
+    transform: scale3d(0.97, 0.97, 0.97); }
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1); } }
+@-ms-keyframes bounceIn {
+  from, 20%, 40%, 60%, 80%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  0% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3); }
+  20% {
+    transform: scale3d(1.1, 1.1, 1.1); }
+  40% {
+    transform: scale3d(0.9, 0.9, 0.9); }
+  60% {
+    opacity: 1;
+    transform: scale3d(1.03, 1.03, 1.03); }
+  80% {
+    transform: scale3d(0.97, 0.97, 0.97); }
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1); } }
+@-o-keyframes bounceIn {
+  from, 20%, 40%, 60%, 80%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  0% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3); }
+  20% {
+    transform: scale3d(1.1, 1.1, 1.1); }
+  40% {
+    transform: scale3d(0.9, 0.9, 0.9); }
+  60% {
+    opacity: 1;
+    transform: scale3d(1.03, 1.03, 1.03); }
+  80% {
+    transform: scale3d(0.97, 0.97, 0.97); }
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1); } }
+@keyframes bounceIn {
+  from, 20%, 40%, 60%, 80%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  0% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3); }
+  20% {
+    transform: scale3d(1.1, 1.1, 1.1); }
+  40% {
+    transform: scale3d(0.9, 0.9, 0.9); }
+  60% {
+    opacity: 1;
+    transform: scale3d(1.03, 1.03, 1.03); }
+  80% {
+    transform: scale3d(0.97, 0.97, 0.97); }
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1); } }
+@-webkit-keyframes bounceOut {
+  20% {
+    transform: scale3d(0.9, 0.9, 0.9); }
+  50%, 55% {
+    opacity: 1;
+    transform: scale3d(1.1, 1.1, 1.1); }
+  to {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3); } }
+@-moz-keyframes bounceOut {
+  20% {
+    transform: scale3d(0.9, 0.9, 0.9); }
+  50%, 55% {
+    opacity: 1;
+    transform: scale3d(1.1, 1.1, 1.1); }
+  to {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3); } }
+@-ms-keyframes bounceOut {
+  20% {
+    transform: scale3d(0.9, 0.9, 0.9); }
+  50%, 55% {
+    opacity: 1;
+    transform: scale3d(1.1, 1.1, 1.1); }
+  to {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3); } }
+@-o-keyframes bounceOut {
+  20% {
+    transform: scale3d(0.9, 0.9, 0.9); }
+  50%, 55% {
+    opacity: 1;
+    transform: scale3d(1.1, 1.1, 1.1); }
+  to {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3); } }
+@keyframes bounceOut {
+  20% {
+    transform: scale3d(0.9, 0.9, 0.9); }
+  50%, 55% {
+    opacity: 1;
+    transform: scale3d(1.1, 1.1, 1.1); }
+  to {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3); } }
 
 /*# sourceMappingURL=flashes.css.map */

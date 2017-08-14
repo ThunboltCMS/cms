@@ -3,36 +3,24 @@
     // nette ajax
     $.nette.init();
 
-    // form errors registration
-    Thunbolt.FormErrors.addListenerOnChange();
-    Thunbolt.FormErrors.init();
+    // hide - flashes
+    setTimeout(function () {
+        var elements = document.getElementsByClassName('flashes-wrapper'), i, flashes, y;
+        console.log(elements);
+        for (i = 0; i < elements.length; i++) {
+            flashes = elements[i].getElementsByClassName('flash');
+            for (y = 0; y < flashes.length; y++) {
+                flashes[y].className += ' hide-effect';
 
-    // flashes
-    function hideFlash(id) {
-        if (!id) {
-            id = $('.flashes-container .flash-message:first-child');
-        }
-        id.fadeOut(500, function () {
-            $(this).remove();
-            if ($('.flashes-container > div').length === 0) {
-                $('.flashes-container').remove();
+                (function (el) {
+                    setTimeout(function () {
+                        el.className += ' hide-flash';
+                    }, 900);
+                })(flashes[y]);
             }
-        });
-    }
-    $('.flashes-container .flash-message').each(function (index) {
-        var time = 5e3 * (index + 1);
-        var that = $(this);
+        }
+    }, 7000);
 
-        setTimeout(function () {
-            hideFlash(that);
-        }, time);
-    });
-    $('.flashes-container .flash-close-btn, .flashes-container .flash-message').on('click', function (e) {
-        hideFlash($(this).closest('.flash-message'));
-        e.preventDefault();
-
-        return false;
-    });
 })(jQuery);
 
 
