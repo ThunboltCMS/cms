@@ -13,7 +13,7 @@ abstract class BaseFormControl extends Control {
 	/** @var IFormFactory */
 	private $factory;
 
-	public function injectComponents(IFormFactory $factory) {
+	public function injectComponents(IFormFactory $factory): void {
 		$this->factory = $factory;
 	}
 

@@ -16,17 +16,8 @@ abstract class BaseForm {
 	/** @var EntityManager */
 	protected $em;
 
-	/**
-	 * @param EntityManager $em
-	 */
-	public function setEntityManager(EntityManager $em) {
+	public function injectComponents(EntityManager $em, IFormFactory $factory): void {
 		$this->em = $em;
-	}
-
-	/**
-	 * @param IFormFactory $factory
-	 */
-	public function setFactory(IFormFactory $factory) {
 		$this->factory = $factory;
 	}
 

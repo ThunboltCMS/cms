@@ -1,8 +1,7 @@
 decorator:
 	App\Forms\BaseForm:
 		setup:
-			- setFactory
-			- setEntityManager
+			- injectComponents
 	App\Forms\BaseFormControl:
 		setup:
 			- injectComponents
