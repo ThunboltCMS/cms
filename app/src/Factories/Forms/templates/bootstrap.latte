@@ -83,10 +83,10 @@
 {* Errors *}
 {define ownErrors}
 	<ul class="error" n:if="$val">
-		<li n:foreach="$val as $error">{$error}</li>
+		<li n:foreach="$val as $error">{_$error}</li>
 	</ul>
 {/define}
 
 {define controlError}
-	<span class=has-error n:ifcontent>{$val}</span>
+	<span class=has-error n:ifcontent>{_$val}</span>
 {/define}
