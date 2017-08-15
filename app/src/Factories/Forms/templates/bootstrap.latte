@@ -66,7 +66,7 @@
 	<div class="col-sm-10 col-sm-offset-2">
 		<div class="checkbox">
 			<label for="{$val->getHtmlId()}">
-				{$val->getControlPart()} {_$val->caption}
+				{$val->getControlPart()} {_(string) $val->caption}
 			</label>
 		</div>
 	</div>
@@ -75,7 +75,7 @@
 {define radio}
 	<div class="radio">
 		<label for="{$val->getHtmlId()}">
-			{$val->getControlPart()} {_$val->caption}
+			{$val->getControlPart()} {_(string) $val->caption}
 		</label>
 	</div>
 {/define}
@@ -83,10 +83,10 @@
 {* Errors *}
 {define ownErrors}
 	<ul class="error" n:if="$val">
-		<li n:foreach="$val as $error">{_$error}</li>
+		<li n:foreach="$val as $error">{_(string) $error}</li>
 	</ul>
 {/define}
 
 {define controlError}
-	<span class=has-error n:ifcontent>{_$val}</span>
+	<span class=has-error n:ifcontent>{_(string) $val}</span>
 {/define}
