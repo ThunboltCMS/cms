@@ -1,39 +1,37 @@
 {* Skeleton *}
 {block form}
 	<form n:name=$form class="form-horizontal">
-		{include ownErrors val => $form->getOwnErrors()}
+		{include ownErrors $form->getOwnErrors()}
 
-		{include container val => $form->getComponents()}
+		{include container $form->getComponents()}
 	</form>
 {/block}
 
 {* Controls *}
-{define controlContainer}
+{define controlContainer $val}
 	<div n:if="!$val->getOption(rendered) && $val->getOption(type) !== hidden"
 			n:class="form-group, $val->required ? required, $val->error ? has-error"
 			n:attr="id => $val->getOption(id)">
 
 		{if $val->getOption(type) === file}
 			{php $val->getControlPrototype()->addClass('ctrl-inline')}
-			{include control val => $val}
+			{include control $val}
 
-		{elseif $ctrl->getOption(type) === radio}
-			{include radio val => $ctrl}
+		{elseif $val->getOption(type) === radio}
+			{include radio $val}
 
 
-		{elseif $ctrl->getOption(type) === checkbox}
-			{include checkbox val => $ctrl}
+		{elseif $val->getOption(type) === checkbox}
+			{include checkbox $val}
 
 		{else}
-			{include control val => $val}
+			{include control $val}
 
 		{/if}
-
-		{include controlError val => $val->error}
 	</div>
 {/define}
 
-{define control}
+{define control $val}
 	{php $val->setAttribute(placeholder, $val->caption)}
 
 	<div class="col-sm-2 control-label">{label $val /}</div>
@@ -45,48 +43,54 @@
 			{input $val class => 'form-control'}
 
 		{/if}
+
+		{include controlErrors $val}
 	</div>
 {/define}
 
 {* Containers *}
-{define container}
+{define container $val}
 	{foreach $val as $ctrl}
 		{if $ctrl instanceof Nette\Forms\Container}
-			{include this val => $ctrl->components}
+			{include this $ctrl->getComponents()}
 
 		{else}
-			{include controlContainer val => $ctrl}
+			{include controlContainer $ctrl}
 
 		{/if}
 	{/foreach}
 {/define}
 
 {* Specific controls *}
-{define checkbox}
+{define checkbox $val}
 	<div class="col-sm-10 col-sm-offset-2">
 		<div class="checkbox">
 			<label for="{$val->getHtmlId()}">
 				{$val->getControlPart()} {_(string) $val->caption}
 			</label>
 		</div>
+
+		{include controlErrors $val}
 	</div>
 {/define}
 
-{define radio}
+{define radio $val}
 	<div class="radio">
 		<label for="{$val->getHtmlId()}">
 			{$val->getControlPart()} {_(string) $val->caption}
 		</label>
 	</div>
+
+	{include controlErrors $val}
 {/define}
 
 {* Errors *}
-{define ownErrors}
+{define ownErrors $val}
 	<ul class="error" n:if="$val">
 		<li n:foreach="$val as $error">{_(string) $error}</li>
 	</ul>
 {/define}
 
-{define controlError}
-	<span class=has-error n:ifcontent>{_(string) $val}</span>
+{define controlErrors $val}
+	<span class="help-block" n:foreach="$val->getErrors() as $error" n:ifcontent>{_(string) $error}</span>
 {/define}
