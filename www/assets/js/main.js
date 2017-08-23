@@ -6,7 +6,7 @@
     // hide - flashes
     setTimeout(function () {
         var elements = document.getElementsByClassName('flashes-wrapper'), i, flashes, y;
-        console.log(elements);
+
         for (i = 0; i < elements.length; i++) {
             flashes = elements[i].getElementsByClassName('flash');
             for (y = 0; y < flashes.length; y++) {
