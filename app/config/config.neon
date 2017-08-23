@@ -17,6 +17,13 @@ assets:
 	resources:
 		- '%appDir%/config/assets.neon'
 
+services:
+	## latte parameters
+	- App\Latte\LatteParameters
+	latte.templateFactory:
+		setup:
+			- '?->onCreate[] = [?, "modify"]'(@self, @App\Latte\LatteParameters)
+
 doctrine:
 	defaultRepositoryClassName: App\Doctrine\Repository
 	types:
