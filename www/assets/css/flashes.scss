@@ -1,14 +1,16 @@
 @import "mixins";
 
 .flashes-wrapper {
-	position: absolute;
+	position: fixed;
 	top: 0;
-	width: 100%;
-	z-index: 101;
+	width: 400px;
+	left: 50%;
+	margin-left: -200px;
+	z-index: 999999;
 
-	& > div {
-		max-width: 500px;
-		margin: 0 auto;
+	@media (max-width: 500px) {
+		width: 200px;
+		margin-left: -100px;
 	}
 
 	.flash {
