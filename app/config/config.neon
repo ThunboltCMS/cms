@@ -5,10 +5,6 @@ application:
 	scanDirs: no
 	errorPresenter: 'Error:Error'
 
-annotations:
-	ignore:
-		- isAllowed
-
 session:
 	expiration: 15 days
 	cookiePath: '?->getUrl()->getBasePath()'(@Nette\Http\IRequest) ## Cookie path same as $basePath
@@ -24,18 +20,22 @@ services:
 		setup:
 			- '?->onCreate[] = [?, "modify"]'(@self, @App\Latte\LatteParameters)
 
-doctrine:
-	defaultRepositoryClassName: App\Doctrine\Repository
-	types:
-		bit: Doctrine\DBAL\Types\BooleanType
-	filters:
-		soft-deleteable: Gedmo\SoftDeleteable\Filter\SoftDeleteableFilter
-	dql:
-		string:
-			MATCH: DoctrineExtensions\Query\Mysql\MatchAgainst
-			DATE: Thunbolt\Doctrine\Addons\DateFunction
-		numeric:
-			RAND: Thunbolt\Doctrine\Addons\Rand
+orm:
+	configuration:
+		defaultRepositoryClassName: App\Doctrine\Repository
+		#dql:
+		#	string:
+		#		MATCH: DoctrineExtensions\Query\Mysql\MatchAgainst
+		#		DATE: Thunbolt\Doctrine\Addons\DateFunction
+		#	numeric:
+		#		RAND: Thunbolt\Doctrine\Addons\Rand
+
+orm.annotations:
+	paths: []
+	cache: Doctrine\Common\Cache\FilesystemCache
+	cacheDir: '%tempDir%/cache/Doctrine.Annotations'
+	ignore:
+		- isAllowed
 
 #translation:
 #	default: 'cs'

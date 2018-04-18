@@ -7,8 +7,9 @@ di:
 assets:
 	minify: yes
 
-doctrine:
-	host: localhost
-	user: root
-	password: ''
-	dbname: test
+dbal:
+	connection:
+		host: localhost
+		user: root
+		password: ''
+		dbname: test

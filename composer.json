@@ -9,15 +9,15 @@
 		"php": ">= 7.1",
 		"nette/application": "v3.0.0-alpha1 as 2.4.2",
 		"nette/bootstrap": "v3.0.0-beta as 2.4",
-		"nette/di": "v3.0.0-alpha1 as 2.4",
+		"nette/di": "v3.0.0-alpha1 as 2.4.x-dev",
 		"nette/finder": "v3.0.0-RC as 2.4",
 		"nette/caching": "v3.0.0-beta as 2.4",
 		"nette/component-model": "v3.0.0-beta as 2.4",
 		"nette/http": "v3.0.0-alpha1 as 2.4",
 		"nette/security": "3.0.0-beta1 as 2.4",
 		"latte/latte": "v3.0.0-alpha1 as 2.4",
-		"nette/utils": "v3.0.0-beta1 as 2.4",
-		"nette/php-generator": "v3.0.0",
+		"nette/utils": "v3.0.0-beta1 as 2.4.x-dev",
+		"nette/php-generator": "v3.0.0 as 2.4",
 		"nette/neon": "v3.0.0-beta1 as 2.4",
 		"nette/forms": "v3.0.0-alpha1 as 2.4",
 
@@ -27,9 +27,9 @@
 		"nette/tokenizer": "^2.2",
 		"tracy/tracy": "^2.4",
 
-		"kdyby/doctrine": "dev-master",
-		"kdyby/console": "dev-master",
-		"kdyby/annotations": "dev-master",
+		"nettrine/orm": "dev-master",
+		"nettrine/dbal": "dev-master",
+		"contributte/console": "dev-master",
 
 		"nextras/mail-panel": "dev-master",
 

@@ -2,10 +2,14 @@ extensions:
 	app: App\DI\AppExtension
 	assets: WebChemistry\Assets\DI\AssetsExtension
 	routers: WebChemistry\Routing\DI\RouterExtension
-	## Kdyby, Doctrine
-	annotations: Kdyby\Annotations\DI\AnnotationsExtension
-	doctrine: Kdyby\Doctrine\DI\OrmExtension
-	console: Kdyby\Console\DI\ConsoleExtension
+	## Nettrine
+	dbal: Nettrine\DBAL\DI\DbalExtension
+	orm: Nettrine\ORM\DI\OrmExtension
+	orm.annotations: Nettrine\ORM\DI\OrmAnnotationsExtension
+	orm.console: Nettrine\ORM\DI\OrmConsoleExtension
+	## Contributte
+	console: Contributte\Console\DI\ConsoleExtension
+	## Kdyby
 	#translation: Kdyby\Translation\DI\TranslationExtension ## optional
 	## Thunbolt
 	templates: Thunbolt\Templates\DI\TemplateExtension
