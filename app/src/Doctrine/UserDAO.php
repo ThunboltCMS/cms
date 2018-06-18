@@ -1,20 +1,18 @@
-<?php
-
-declare(strict_types=1);
+<?php declare(strict_types = 1);
 
 namespace App\Doctrine;
 
-use Doctrine\ORM\EntityManager;
+use Doctrine\ORM\EntityManagerInterface;
 use Thunbolt\User\Interfaces\IUserDAO;
 use Thunbolt\User\Interfaces\IUserEntity;
 use Thunbolt\User\Interfaces\IUserRepository;
 
 class UserDAO implements IUserDAO {
 
-	/** @var EntityManager */
+	/** @var EntityManagerInterface */
 	private $em;
 
-	public function __construct(EntityManager $em) {
+	public function __construct(EntityManagerInterface $em) {
 		$this->em = $em;
 	}
 

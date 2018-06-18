@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types = 1);
 
 namespace App\Routers;
 
@@ -22,7 +22,7 @@ final class LocalRouter implements IRouter {
 		$front = $routeManager->getModule('Front');
 		$front[] = new Route('<presenter>[/<action>][/<id [0-9]+>[-<name [0-9a-zA-Z\-]+>]]', [
 			'presenter' => 'Homepage',
-			'action' => 'default'
+			'action' => 'default',
 		]);
 	}
 

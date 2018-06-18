@@ -6,7 +6,8 @@ namespace App\Forms;
 
 use App\Factories\Forms\IFormFactory;
 use App\UI\Form;
-use Doctrine\ORM\EntityManager;
+use Doctrine\ORM\EntityManagerInterface;
+use Nettrine\ORM\EntityManager;
 use Thunbolt\Components\IFlashes;
 
 abstract class BaseForm {
@@ -20,7 +21,7 @@ abstract class BaseForm {
 	/** @var IFlashes */
 	private $flashes;
 
-	public function injectComponents(EntityManager $em, IFormFactory $factory, IFlashes $flashes): void {
+	public function injectComponents(EntityManagerInterface $em, IFormFactory $factory, IFlashes $flashes): void {
 		$this->em = $em;
 		$this->factory = $factory;
 		$this->flashes = $flashes;

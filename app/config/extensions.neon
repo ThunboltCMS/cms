@@ -8,17 +8,13 @@ extensions:
 	orm.annotations: Nettrine\ORM\DI\OrmAnnotationsExtension
 	orm.console: Nettrine\ORM\DI\OrmConsoleExtension
 	## Contributte
-	console: Contributte\Console\DI\ConsoleExtension
-	## Kdyby
-	#translation: Kdyby\Translation\DI\TranslationExtension ## optional
+	console: Contributte\Console\DI\ConsoleExtension(%consoleMode%)
 	## Thunbolt
 	templates: Thunbolt\Templates\DI\TemplateExtension
 	core: Thunbolt\CoreExtension
-	## WebChemistry
-	widgets: WebChemistry\Widgets\DI\WidgetsExtension ## optional
 	## Thunbolt
 	user: Thunbolt\User\DI\UserExtension
-	config: Thunbolt\Config\DI\ConfigExtension
 	localization: Thunbolt\Localization\DI\LocalizationExtension
+	metadata: ProLib\Metadata\DI\MetadataExtension
 	- Thunbolt\Application\DI\ApplicationExtension
 	- Thunbolt\DI\TemplateFormExtension

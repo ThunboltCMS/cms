@@ -9,14 +9,14 @@
 		"php": ">= 7.1",
 		"nette/application": "v3.0.0-alpha1 as 2.4.2",
 		"nette/bootstrap": "v3.0.0-beta as 2.4",
-		"nette/di": "v3.0.0-alpha1 as 2.4.x-dev",
+		"nette/di": "v3.0.x-dev as 2.4.x-dev",
 		"nette/finder": "v3.0.0-RC as 2.4",
 		"nette/caching": "v3.0.0-beta as 2.4",
 		"nette/component-model": "v3.0.0-beta as 2.4",
 		"nette/http": "v3.0.0-alpha1 as 2.4",
 		"nette/security": "3.0.0-beta1 as 2.4",
 		"latte/latte": "v3.0.0-alpha1 as 2.4",
-		"nette/utils": "v3.0.0-beta1 as 2.4.x-dev",
+		"nette/utils": "v3.0.0-beta1 as 2.5.x-dev",
 		"nette/php-generator": "v3.0.0 as 2.4",
 		"nette/neon": "v3.0.0-beta1 as 2.4",
 		"nette/forms": "v3.0.0-alpha1 as 2.4",
@@ -33,15 +33,12 @@
 
 		"nextras/mail-panel": "dev-master",
 
-		"webchemistry/router": "dev-master",
-		"webchemistry/widgets": "dev-master",
-		"webchemistry/assets": "dev-master",
+		"webchemistry/router": "~2.0.1",
+		"webchemistry/assets": "~2.0.2",
 		"webchemistry/utils": "dev-master",
-		"webchemistry/component-macro": "dev-master",
 
-		"thunbolt/config": "dev-master",
 		"thunbolt/composer-installer": "dev-master",
-		"thunbolt/application": "dev-master",
+		"thunbolt/application": "^2.0",
 		"thunbolt/templates": "dev-master",
 		"thunbolt/thunbolt": "dev-master",
 		"thunbolt/user": "dev-master",
@@ -49,8 +46,10 @@
 		"thunbolt/core": "dev-master",
 		"thunbolt/bundles": "dev-master",
 		"thunbolt/localization": "dev-master",
-		"thunbolt/bin": "dev-master",
-		"thunbolt/template-form-renderer": "dev-master"
+		"thunbolt/bin": "^1.0",
+		"thunbolt/template-form-renderer": "^1.0",
+
+		"prolib/metadata": "dev-master"
 	},
 	"autoload": {
 		"psr-4": {

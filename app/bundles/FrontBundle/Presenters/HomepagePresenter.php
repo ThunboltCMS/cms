@@ -1,8 +1,6 @@
-<?php
+<?php declare(strict_types = 1);
 
-declare(strict_types=1);
-
-namespace AppBundle\FrontModule;
+namespace FrontBundle\Presenters;
 
 use App\Presenters\FrontPresenter;
 

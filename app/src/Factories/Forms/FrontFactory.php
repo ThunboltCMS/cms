@@ -1,6 +1,4 @@
-<?php
-
-declare(strict_types=1);
+<?php declare(strict_types = 1);
 
 namespace App\Factories\Forms;
 
@@ -16,7 +14,7 @@ final class FrontFactory implements IFormFactory {
 	/** @var ITranslator */
 	private $translator;
 
-	public function __construct(ITemplateFormRenderer $templateFormRenderer, ?ITranslator $translator = NULL) {
+	public function __construct(ITemplateFormRenderer $templateFormRenderer, ?ITranslator $translator = null) {
 		$this->templateFormRenderer = $templateFormRenderer;
 		$this->translator = $translator;
 	}

@@ -1,10 +1,9 @@
-<?php
-
-declare(strict_types=1);
+<?php declare(strict_types = 1);
 
 namespace App\Presenters;
 
 use App\Forms\SignInForm;
+use App\UI\Form;
 
 abstract class FrontPresenter extends BasePresenter {
 
@@ -15,7 +14,7 @@ abstract class FrontPresenter extends BasePresenter {
 		$this->signInForm = $signInForm;
 	}
 
-	protected function createComponentSignInForm() {
+	protected function createComponentSignInForm(): Form {
 		$form = $this->signInForm->createSignIn();
 
 		$form->onSuccess[] = function () {
@@ -24,5 +23,5 @@ abstract class FrontPresenter extends BasePresenter {
 
 		return $form;
 	}
-	
+
 }

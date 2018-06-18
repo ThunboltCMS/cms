@@ -1,8 +1,0 @@
-config: ## variable $config in template
-	website:
-		name: 'Website'
-		title: 'Website: '
-		email: 'admin@example.com'
-		description: ''
-		keywords: ''
-		lang: 'cs'

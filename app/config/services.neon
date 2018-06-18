@@ -10,3 +10,4 @@ services:
 	- App\Doctrine\UserDAO
 	- App\Forms\SignInForm
 	- App\Factories\Forms\FrontFactory
+	- App\Components\IFlashFactory

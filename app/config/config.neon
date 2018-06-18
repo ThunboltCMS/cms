@@ -5,6 +5,10 @@ application:
 	scanDirs: no
 	errorPresenter: 'Error:Error'
 
+metadata:
+	title: 'Thunbolt'
+	description: 'Thunbolt'
+
 session:
 	expiration: 15 days
 	cookiePath: '?->getUrl()->getBasePath()'(@Nette\Http\IRequest) ## Cookie path same as $basePath
@@ -12,13 +16,6 @@ session:
 assets:
 	resources:
 		- '%appDir%/config/assets.neon'
-
-services:
-	## latte parameters
-	- App\Latte\LatteParameters
-	latte.templateFactory:
-		setup:
-			- '?->onCreate[] = [?, "modify"]'(@self, @App\Latte\LatteParameters)
 
 orm:
 	configuration:
@@ -37,6 +34,12 @@ orm.annotations:
 	ignore:
 		- isAllowed
 
+routers:
+	main: App\Routers\LocalRouter
+
+di:
+	debugger: no
+
 #translation:
 #	default: 'cs'
 #	whitelist: [cs]
@@ -46,9 +49,3 @@ orm.annotations:
 #       "%appDir%/translations"
 #   ] # reset
 #	loaders: [neon]
-
-routers:
-	main: App\Routers\LocalRouter
-
-di:
-	debugger: no
