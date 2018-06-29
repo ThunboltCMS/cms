@@ -29,8 +29,7 @@ orm:
 
 orm.annotations:
 	paths: []
-	cache: Doctrine\Common\Cache\FilesystemCache
-	cacheDir: '%tempDir%/cache/Doctrine.Annotations'
+	cache: Doctrine\Common\Cache\FilesystemCache(%tempDir%/cache/Doctrine.Annotations)
 	ignore:
 		- isAllowed
 
