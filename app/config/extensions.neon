@@ -16,5 +16,6 @@ extensions:
 	user: Thunbolt\User\DI\UserExtension
 	localization: Thunbolt\Localization\DI\LocalizationExtension
 	metadata: ProLib\Metadata\DI\MetadataExtension
+	error: WebChemistry\ErrorPresenter\DI\ErrorExtension
 	- Thunbolt\Application\DI\ApplicationExtension
 	- Thunbolt\DI\TemplateFormExtension

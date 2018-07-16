@@ -36,6 +36,7 @@
 		"webchemistry/router": "~2.0.1",
 		"webchemistry/assets": "~2.0.2",
 		"webchemistry/utils": "dev-master",
+		"webchemistry/error-presenter": "~1.0.0",
 
 		"thunbolt/composer-installer": "dev-master",
 		"thunbolt/application": "^2.0",

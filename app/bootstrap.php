@@ -3,7 +3,7 @@
 require __DIR__ . '/../vendor/autoload.php';
 
 $configurator = new Nette\Configurator();
-//$configurator->setDebugMode(FALSE);
+$configurator->setDebugMode(false);
 
 $bootstrap = new Thunbolt\Bootstrap(__DIR__, $configurator);
 $bootstrap->initialize();
