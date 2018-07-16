@@ -39,7 +39,7 @@
 		"webchemistry/error-presenter": "~1.0.0",
 
 		"thunbolt/composer-installer": "dev-master",
-		"thunbolt/application": "^2.0",
+		"thunbolt/application": "dev-master",
 		"thunbolt/templates": "dev-master",
 		"thunbolt/thunbolt": "dev-master",
 		"thunbolt/user": "dev-master",
