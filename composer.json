@@ -33,8 +33,8 @@
 
 		"nextras/mail-panel": "dev-master",
 
-		"webchemistry/router": "~2.0.1",
-		"webchemistry/assets": "~2.0.2",
+		"webchemistry/router": "dev-master",
+		"webchemistry/assets": "dev-master",
 		"webchemistry/utils": "dev-master",
 		"webchemistry/error-presenter": "~1.0.0",
 
