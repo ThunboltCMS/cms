@@ -13,6 +13,10 @@ session:
 	expiration: 15 days
 	cookiePath: '?->getUrl()->getBasePath()'(@Nette\Http\IRequest) ## Cookie path same as $basePath
 
+latte:
+	macros:
+		- App\Latte\LatteMacros
+
 assets:
 	resources:
 		- '%appDir%/config/assets.neon'
