@@ -2,19 +2,20 @@
 .idea
 
 ## temp
-var/
+var/*
 
 # composer
-vendor/
-plugins/
+vendor/*
+plugins/*
 composer.lock
 
 ## nodejs
 node_modules
+package-lock.json
 
 ## www
-www/plugin-assets
-www/assets/minified/
+www/plugin-assets/*
+www/dist
 
 ## exclude
 !.gitignore

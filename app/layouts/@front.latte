@@ -9,7 +9,7 @@
 	{/block}
 
 	{block styles}
-		{assets 'assets/minified/front.min.css'}
+		{$_assets[styles]}
 	{/block}
 
 	{block head}{/block}
@@ -27,7 +27,7 @@
 
 	{* Scripts *}
 	{block scripts}
-		{assets 'assets/minified/front.min.js'}
+		{$_assets[javascript]}
 	{/block}
 </body>
 </html>

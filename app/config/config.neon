@@ -10,15 +10,16 @@ metadata:
 
 session:
 	expiration: 15 days
-	cookiePath: '?->getUrl()->getBasePath()'(@Nette\Http\IRequest) ## Cookie path same as $basePath
 
 latte:
 	macros:
 		- App\Latte\LatteMacros
 
 assets:
-	resources:
-		- '%appDir%/config/assets.neon'
+	styles:
+		- @Thunbolt\Assets\Loaders\WebpackAssetsLoader::getStyle()
+	javascript:
+		- @Thunbolt\Assets\Loaders\WebpackAssetsLoader::getJavascript()
 
 orm:
 	configuration:
@@ -36,8 +37,9 @@ orm.annotations:
 	ignore:
 		- isAllowed
 
-routers:
-	main: App\Routers\LocalRouter
+services:
+	localRouter: App\Routers\LocalRouter
+	router: @localRouter::createRouter
 
 di:
 	debugger: no

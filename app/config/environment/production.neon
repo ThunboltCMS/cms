@@ -4,9 +4,6 @@ extensions:
 di:
 	debugger: no
 
-assets:
-	minify: yes
-
 dbal:
 	connection:
 		host: localhost

@@ -1,7 +1,6 @@
 extensions:
 	app: App\DI\AppExtension
-	assets: WebChemistry\Assets\DI\AssetsExtension
-	routers: WebChemistry\Routing\DI\RouterExtension
+	assets: Thunbolt\Assets\DI\AssetsExtension
 	## Nettrine
 	dbal: Nettrine\DBAL\DI\DbalExtension
 	orm: Nettrine\ORM\DI\OrmExtension

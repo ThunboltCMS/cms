@@ -5,9 +5,6 @@ tracy:
 	bar:
 		- Nextras\MailPanel\MailPanel(%tempDir%/mail-panel)
 
-assets:
-	minify: no
-
 dbal:
 	connection:
 		host: localhost
