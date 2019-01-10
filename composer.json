@@ -17,7 +17,7 @@
 		"nette/security": "3.0.0-beta1 as 2.4",
 		"latte/latte": "v3.0.0-alpha1 as 2.4",
 		"nette/utils": "v3.0.0-beta1 as 2.5.x-dev",
-		"nette/php-generator": "v3.0.0 as 2.4",
+		"nette/php-generator": "3.2.1 as 2.4",
 		"nette/neon": "v3.0.0-beta1 as 2.4",
 		"nette/forms": "v3.0.0-alpha1 as 2.4",
 
