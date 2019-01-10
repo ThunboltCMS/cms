@@ -3,6 +3,7 @@
 
 ## temp
 var/*
+app/var/*
 
 # composer
 vendor/*
@@ -19,5 +20,6 @@ www/dist
 
 ## exclude
 !.gitignore
+!.gitkeep
 !.htaccess
 !web.config
