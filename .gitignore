@@ -1,3 +1,6 @@
+#ide
+.idea
+
 var/tmp/*
 var/log/*
 vendor/*
