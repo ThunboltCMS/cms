@@ -1,16 +1,22 @@
 #ide
 .idea
 
-var/tmp/*
-var/log/*
-vendor/*
-plugins/*
+## temp
+var/
+
+# composer
+vendor/
+plugins/
+composer.lock
+
+## nodejs
 node_modules
+
+## www
+www/plugin-assets
+www/assets/minified/
+
+## exclude
 !.gitignore
 !.htaccess
 !web.config
-.idea
-composer.lock
-!default
-www/plugin-assets
-www/assets/minified/
