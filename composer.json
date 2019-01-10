@@ -47,7 +47,6 @@
 		"thunbolt/core": "dev-master",
 		"thunbolt/bundles": "dev-master",
 		"thunbolt/localization": "dev-master",
-		"thunbolt/bin": "^1.0",
 		"thunbolt/template-form-renderer": "^1.0",
 
 		"prolib/metadata": "dev-master"
