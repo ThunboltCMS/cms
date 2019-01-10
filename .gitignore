@@ -2,13 +2,11 @@ var/tmp/*
 var/log/*
 vendor/*
 plugins/*
-bin/*
 node_modules
 !.gitignore
 !.htaccess
 !web.config
 .idea
-www/assets/bower-components/
 composer.lock
 !default
 www/plugin-assets
