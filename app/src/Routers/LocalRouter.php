@@ -27,12 +27,15 @@ final class LocalRouter {
 	public function createRouter(): RouteList {
 		$this->addWebalizeStyle('name');
 
+		$list = new RouteList();
 		// Admin
 		$admin = new RouteList('Admin');
 		$admin[] = new Route('admin[/<presenter>[/<action>][/<id [0-9]+>[-<name [0-9a-zA-Z\-]+>]]]', [
 			'presenter' => 'Homepage',
 			'action' => 'default',
 		]);
+
+		$list[] = $admin;
 
 		// Front
 		$front = new RouteList('Front');
@@ -41,7 +44,9 @@ final class LocalRouter {
 			'action' => 'default',
 		]);
 
-		return $front;
+		$list[] = $front;
+
+		return $list;
 	}
 
 }
