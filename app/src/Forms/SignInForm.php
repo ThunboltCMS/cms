@@ -20,16 +20,16 @@ final class SignInForm extends BaseForm implements ISignInForm {
 	public function createSignIn(): Form {
 		$form = $this->create();
 
-		$form->addText('name', 'core.user.email')
+		$form->addText('name', 'Email')
 			->setRequired()
 			->addRule($form::EMAIL);
 
-		$form->addPassword('password', 'core.user.password')
+		$form->addPassword('password', 'Heslo')
 			->setRequired();
 
-		$form->addCheckbox('remember', 'core.user.remember');
+		$form->addCheckbox('remember', 'Zapamatovat');
 
-		$form->addSubmit('send', 'core.user.signIn');
+		$form->addSubmit('send', 'Přihlásit');
 		$form->onSuccess[] = [$this, 'successSignIn'];
 
 		return $form;
