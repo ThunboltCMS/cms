@@ -45,9 +45,9 @@ final class SignInForm extends BaseForm implements ISignInForm {
 		try {
 			$this->user->login($values['name'], $values['password']);
 		} catch (BadPasswordException $e) {
-			$form->addError($form->getTranslator()->translate('core.user.wrongPassword'));
+			$form->addError('Špatně zadané heslo.');
 		} catch (UserNotFoundException $e) {
-			$form->addError($form->getTranslator()->translate('core.user.notExists'));
+			$form->addError('Špatně zadané heslo.');
 		}
 	}
 
