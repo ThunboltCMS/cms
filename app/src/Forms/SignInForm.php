@@ -47,7 +47,7 @@ final class SignInForm extends BaseForm implements ISignInForm {
 		} catch (BadPasswordException $e) {
 			$form->addError('Špatně zadané heslo.');
 		} catch (UserNotFoundException $e) {
-			$form->addError('Špatně zadané heslo.');
+			$form->addError('Uživatel neexistuje.');
 		}
 	}
 
