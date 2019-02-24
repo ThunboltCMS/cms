@@ -6,7 +6,6 @@ use App\Latte\FilterLoader;
 use App\Latte\LatteMacros;
 use App\Latte\LatteParameters;
 use Nette\DI\CompilerExtension;
-use WebChemistry\Utils\DI\DIHelpers;
 
 final class AppExtension extends CompilerExtension {
 
@@ -23,9 +22,14 @@ final class AppExtension extends CompilerExtension {
 	public function beforeCompile(): void {
 		$builder = $this->getContainerBuilder();
 
-		$helper = new DIHelpers($builder);
-		$helper->registerLatteFilterLoader($this->prefix('@filterLoader'));
-		$helper->registerLatteMacroLoader(LatteMacros::class);
+
+		$builder->getDefinition('latte.latteFactory')
+			->getResultDefinition()
+				->addSetup('?->addFilter(null, [?, ?])', ['@self', $this->prefix('@filterLoader'), 'load']);
+
+		$builder->getDefinition('latte.latteFactory')
+			->getResultDefinition()
+				->addSetup('?->onCompile[] = function ($engine) { ' . LatteMacros::class . '::install($engine->getCompiler()); }', ['@self']);
 
 		$builder->getDefinition('latte.templateFactory')
 			->addSetup('?->onCreate[] = [?, "modify"]', ['@self', $builder->getDefinition($this->prefix('latteParameters'))]);
