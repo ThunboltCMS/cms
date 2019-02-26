@@ -10,11 +10,11 @@ extensions:
 	console: Contributte\Console\DI\ConsoleExtension(%consoleMode%)
 	## Thunbolt
 	templates: Thunbolt\Templates\DI\TemplateExtension
-	core: Thunbolt\CoreExtension
-	## Thunbolt
 	user: Thunbolt\User\DI\UserExtension
 	localization: Thunbolt\Localization\DI\LocalizationExtension
 	metadata: ProLib\Metadata\DI\MetadataExtension
+	doctrineExtensions: Thunbolt\Doctrine\DI\DoctrineExtension
 	error: WebChemistry\ErrorPresenter\DI\ErrorExtension
 	- Thunbolt\Application\DI\ApplicationExtension
 	- Thunbolt\DI\TemplateFormExtension
+	- Thunbolt\Flashes\DI\FlashesExtension

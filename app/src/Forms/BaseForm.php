@@ -1,21 +1,18 @@
-<?php
-
-declare(strict_types=1);
+<?php declare(strict_types = 1);
 
 namespace App\Forms;
 
 use App\Factories\Forms\IFormFactory;
 use App\UI\Form;
 use Doctrine\ORM\EntityManagerInterface;
-use Nettrine\ORM\EntityManager;
-use Thunbolt\Components\IFlashes;
+use Thunbolt\Flashes\IFlashes;
 
 abstract class BaseForm {
 
 	/** @var IFormFactory */
 	protected $factory;
 
-	/** @var EntityManager */
+	/** @var EntityManagerInterface */
 	protected $em;
 
 	/** @var IFlashes */

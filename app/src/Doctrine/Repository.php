@@ -2,7 +2,7 @@
 
 namespace App\Doctrine;
 
-use Thunbolt\Model\BaseRepository;
+use Thunbolt\Doctrine\Model\BaseRepository;
 
 class Repository extends BaseRepository {
 

@@ -40,15 +40,16 @@
 		"thunbolt/application": "~3.0.0",
 		"thunbolt/templates": "~3.0.0",
 		"thunbolt/thunbolt": "~3.0.0",
-		"thunbolt/user": "dev-master",
+		"thunbolt/user": "~3.0.0",
 		"thunbolt/bar": "dev-master",
-		"thunbolt/core": "dev-master",
+		"thunbolt/flashes": "~1.0.0",
+		"thunbolt/doctrine": "~1.0.0",
 		"thunbolt/bundles": "~1.0.0",
 		"thunbolt/localization": "~2.0.0",
 		"thunbolt/template-form-renderer": "~2.0.0",
 		"thunbolt/assets": "~1.0.0",
 
-		"prolib/metadata": "dev-master"
+		"prolib/metadata": "~1.0.0"
 	},
 	"autoload": {
 		"psr-4": {

@@ -21,15 +21,14 @@ assets:
 	javascript:
 		- @Thunbolt\Assets\Loaders\WebpackAssetsLoader::getJavascript()
 
+doctrineExtensions:
+	functions:
+		rand:
+			enabled: yes
+
 orm:
 	configuration:
 		defaultRepositoryClassName: App\Doctrine\Repository
-		#dql:
-		#	string:
-		#		MATCH: DoctrineExtensions\Query\Mysql\MatchAgainst
-		#		DATE: Thunbolt\Doctrine\Addons\DateFunction
-		#	numeric:
-		#		RAND: Thunbolt\Doctrine\Addons\Rand
 
 orm.annotations:
 	paths: []
@@ -43,13 +42,3 @@ services:
 
 di:
 	debugger: no
-
-#translation:
-#	default: 'cs'
-#	whitelist: [cs]
-#	resolvers:
-#		session: yes
-#	dirs: [
-#       "%appDir%/translations"
-#   ] # reset
-#	loaders: [neon]
