@@ -27,8 +27,7 @@
 		"nette/tokenizer": "^3.0",
 		"tracy/tracy": "^2.6",
 
-		"nettrine/orm": "dev-master",
-		"nettrine/dbal": "dev-master",
+		"nettrine/orm": "~0.3",
 		"contributte/console": "dev-master",
 		"contributte/utils": "dev-master",
 
