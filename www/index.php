@@ -1,10 +1,15 @@
 <?php
 
-// Uncomment this line if you must temporarily take down your site for maintenance.
-// require __DIR__ . '/.maintenance.php';
-
+use App\Booting;
 use Nette\Application\Application;
 
-$container = require __DIR__ . '/../app/bootstrap.php';
+require __DIR__ . '/../vendor/autoload.php';
 
-$container->getByType(Application::class)->run();
+$booting = new Booting(__DIR__ . '/.maintenance.php', true);
+
+//$booting->setMaintenance(true);
+
+$booting->boot()
+	->createContainer()
+	->getByType(Application::class)
+	->run();

@@ -1,6 +1,11 @@
 php:
 	date.timezone: Europe/Prague
 
+includes:
+    - bundles.neon
+    - extensions.neon
+    - services.neon
+
 application:
 	scanDirs: no
 
