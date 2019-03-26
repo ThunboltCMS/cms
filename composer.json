@@ -9,29 +9,30 @@
 		"php": ">= 7.2",
 		"nette/application": "v3.0.x-dev as 2.4.2",
 		"nette/bootstrap": "v3.0.0-beta as 2.4",
-		"nette/di": "v3.0.x-dev as 2.4.x-dev",
-		"nette/finder": "v3.0.0-RC as 2.4",
-		"nette/caching": "v3.0.0 as 2.4",
-		"nette/component-model": "v3.0.0 as 2.4",
-		"nette/http": "v3.0.x-dev as 2.4",
-		"nette/security": "v3.0.0 as 2.4",
-		"latte/latte": "v2.5.0 as 2.4",
-		"nette/utils": "v3.0.0 as 2.5.x-dev",
-		"nette/php-generator": "v3.2 as 2.4",
-		"nette/neon": "v3.0.0 as 2.4",
-		"nette/forms": "v3.0.0-alpha1 as 2.4",
+		"nette/di": "3.0.0-RC as 2.4.15",
+		"nette/finder": "~2.5.0",
+		"nette/caching": "~3.0.0",
+		"nette/component-model": "~3.0.0",
+		"nette/http": "3.0.0 as 2.4.11",
+		"nette/security": "~3.0.0",
+		"latte/latte": "~2.5.0",
+		"nette/utils": "3.0.0 as 2.5.2",
+		"nette/php-generator": "~3.2.0",
+		"nette/neon": "~3.0.0",
+		"nette/forms": "~3.0.0",
+		"nette/routing": "~3.0.0",
 
-		"nette/mail": "^2.4",
-		"nette/reflection": "^2.4.2",
-		"nette/safe-stream": "^2.4",
-		"nette/tokenizer": "^3.0",
-		"tracy/tracy": "^2.6",
+		"nette/mail": "3.0.0 as 2.4",
+		"nette/reflection": "^2.4",
+		"nette/safe-stream": "^2.3",
+		"nette/tokenizer": "^2.2",
+		"tracy/tracy": "~2.6.0",
 
-		"nettrine/orm": "~0.3",
-		"contributte/console": "dev-master",
-		"contributte/utils": "dev-master",
+		"nettrine/orm": "~0.3.0",
+		"nettrine/dbal": "~0.3.0",
+		"contributte/console": "~0.5.0",
 
-		"nextras/mail-panel": "^2.4",
+		"nextras/mail-panel": "~2.4.0",
 
 		"webchemistry/error-presenter": "~2.0",
 
@@ -54,7 +55,10 @@
 		"psr-4": {
 			"App\\": ["app/src/"],
 			"": ["app/bundles/"]
-		}
+		},
+		"classmap": [
+			"app/Booting.php"
+		]
 	},
 	"minimum-stability": "dev",
 	"prefer-stable": true,
