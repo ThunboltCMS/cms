@@ -1,2 +1,2 @@
-import "./css";
-import "./js";
+import './css';
+import './js';

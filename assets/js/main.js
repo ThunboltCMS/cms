@@ -1,6 +1,9 @@
-import "nette.ajax.js";
+import 'nette.ajax.js';
+import Nette from 'nette-forms';
+import $ from 'jquery';
 
-let $ = require('jquery');
+// nette forms
+Nette.initOnLoad();
 
 // nette ajax
 $.nette.init();

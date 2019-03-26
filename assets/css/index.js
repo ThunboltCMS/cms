@@ -1,2 +1,2 @@
-import "./flashes.scss";
-import "./main.scss";
+import './flashes.scss';
+import './main.scss';
