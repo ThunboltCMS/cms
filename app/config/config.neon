@@ -21,10 +21,17 @@ latte:
 		- App\Latte\LatteMacros
 
 assets:
-	styles:
-		- @Thunbolt\Assets\Loaders\WebpackAssetsLoader::getStyle()
-	javascript:
-		- @Thunbolt\Assets\Loaders\WebpackAssetsLoader::getJavascript()
+	css:
+		- $src/src.css
+	js:
+		- $src/src.js
+	manifests:
+		src:
+			manifest: %wwwDir%/dist/manifest.json
+			styles:
+				src.css: dist/$name
+			javascript:
+				src.js: dist/$name
 
 doctrineExtensions:
 	functions:

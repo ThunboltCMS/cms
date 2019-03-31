@@ -4,40 +4,31 @@ namespace App\Presenters;
 
 use App\Forms\SignInForm;
 use Nette\Application\UI\Form;
-use Thunbolt\Assets\IAssetsLoader;
+use WebChemistry\AssetsBuilder\IAssetsBuilder;
+use WebChemistry\AssetsBuilder\Traits\TAssetsPreload;
 
 abstract class FrontPresenter extends BasePresenter {
+
+	use TAssetsPreload;
 
 	/** @var SignInForm */
 	private $signInForm;
 
-	/** @var IAssetsLoader */
-	private $assetsLoader;
-
-	protected function startup() {
-		parent::startup();
-
-		if (!$this->isAjax()) {
-			$this->assetsLoader->preload();
-		}
-	}
+	/** @var IAssetsBuilder */
+	private $assetsBuilder;
 
 	protected function beforeRender() {
 		parent::beforeRender();
 
 		$template = $this->getTemplate();
-		$template->_assets = [
-			'styles' => $this->assetsLoader->getHtmlStyles(),
-			'javascript' => $this->assetsLoader->getHtmlJavascript(),
-		];
+
+		$template->css = $this->assetsBuilder->buildCss();
+		$template->js = $this->assetsBuilder->buildJs();
 	}
 
-	public function injectSignInForms(SignInForm $signInForm): void {
+	final public function injectFrontPresenter(SignInForm $signInForm, IAssetsBuilder $assetsBuilder) {
 		$this->signInForm = $signInForm;
-	}
-
-	public function injectAssetsLoader(IAssetsLoader $assetsLoader): void {
-		$this->assetsLoader = $assetsLoader;
+		$this->assetsBuilder = $assetsBuilder;
 	}
 
 	protected function createComponentSignInForm(): Form {

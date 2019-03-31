@@ -1,6 +1,6 @@
 extensions:
 	app: App\DI\AppExtension
-	assets: Thunbolt\Assets\DI\AssetsExtension
+	assets: WebChemistry\AssetsBuilder\DI\AssetsBuilderExtension
 	## Nettrine
 	dbal: Nettrine\DBAL\DI\DbalExtension
 	orm: Nettrine\ORM\DI\OrmExtension

@@ -3,16 +3,15 @@ const path = require('path');
 const fs = require('fs');
 
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const ManifestPlugin = require('webpack-manifest-plugin');
 
 // paths
 const distPath = 'www/dist';
 
 // directories
-const appDir = path.join(__dirname, 'app');
 const assetsDir = path.join(__dirname, 'assets');
-const generated = path.join(appDir, 'var/js');
 const distDir = path.join(__dirname, distPath);
 
 module.exports = (env, argv) => {
@@ -61,13 +60,15 @@ module.exports = (env, argv) => {
 				},
 				{
 					test: /\.s?css$/,
-					use: ExtractTextPlugin.extract({
-						fallback: 'style-loader',
-						use: [
-							'css-loader',
-							'sass-loader',
-						]
-					})
+					use: [
+						MiniCssExtractPlugin.loader,
+						{
+							loader: 'css-loader'
+						},
+						{
+							loader: 'sass-loader'
+						},
+					]
 				},
 				{
 					test: /\.woff2?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
@@ -86,30 +87,16 @@ module.exports = (env, argv) => {
 			]
 		},
 		plugins: [
-			new ExtractTextPlugin(production ? '[name].[hash].css' : '[name].css'),
 			new webpack.ProvidePlugin({
 				'window.jQuery': 'jquery',
+			}),
+			new MiniCssExtractPlugin({
+				filename: production ? '[name].[hash].css' : '[name].css',
 			}),
 			new CleanWebpackPlugin({
 				dry: false,
 			}),
-			function () {
-				this.hooks.done.tap('GeneratedPlugin', (stats) => {
-					if (fs.existsSync(generated + '/hash.txt')) {
-						fs.unlinkSync(generated + '/hash.txt');
-					}
-
-					if (!production) {
-						return;
-					}
-					if (!fs.existsSync(generated)) {
-						fs.mkdirSync(generated);
-					}
-					fs.writeFile(generated + '/hash.txt', stats.hash, { flag: 'w' }, (err) => {
-						if (err) throw err;
-					});
-				});
-			}
+			new ManifestPlugin(),
 		]
 	};
 
