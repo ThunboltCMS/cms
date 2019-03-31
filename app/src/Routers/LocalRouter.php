@@ -2,8 +2,8 @@
 
 namespace App\Routers;
 
-use Contributte\Utils\Strings;
 use Nette\Routing\Route;
+use Nette\Utils\Strings;
 
 final class LocalRouter {
 
