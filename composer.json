@@ -5,25 +5,15 @@
 	"authors": [
 
 	],
-	"repositories": [
-		{
-			"type": "vcs",
-			"url": "https://github.com/MartkCz/cache"
-		},
-		{
-			"type": "vcs",
-			"url": "https://github.com/MartkCz/dbal"
-		}
-	],
 	"require": {
 		"php": ">= 7.2",
-		"nette/application": "v3.0.0-RC3 as 2.4.2",
-		"nette/bootstrap": "v3.0.0 as 2.4",
-		"nette/di": "3.0.0-RC3 as 2.4.15",
+		"nette/application": "~3.0.0",
+		"nette/bootstrap": "~3.0.0",
+		"nette/di": "~3.0.0",
 		"nette/finder": "~2.5.0",
 		"nette/caching": "~3.0.0",
 		"nette/component-model": "~3.0.0",
-		"nette/http": "3.0.0 as 2.4.11",
+		"nette/http": "3.0.1 as 2.4.11",
 		"nette/security": "~3.0.0",
 		"latte/latte": "~2.5.0",
 		"nette/utils": "3.0.1 as 2.5.2",
@@ -36,19 +26,19 @@
 		"nette/reflection": "^2.4",
 		"nette/safe-stream": "^2.3",
 		"nette/tokenizer": "^3.0",
-		"tracy/tracy": "~2.6.0",
+		"tracy/tracy": "~2.6.2",
 
 		"nettrine/orm": "~0.3.0",
 		"nettrine/dbal": "dev-master as 0.3.0",
 		"contributte/console": "~0.5.0",
 
-		"nextras/mail-panel": "~2.4.0",
+		"nextras/mail-panel": "~2.5.1",
 
 		"webchemistry/error-presenter": "~2.0",
-		"webchemistry/assets-builder": "^1.0.0",
+		"webchemistry/assets-builder": "^1.1.1",
 
 		"thunbolt/composer-installer": "~2.0.0",
-		"thunbolt/application": "~3.0.0",
+		"thunbolt/application": "~3.0.1",
 		"thunbolt/templates": "~3.0.0",
 		"thunbolt/thunbolt": "~3.0.0",
 		"thunbolt/user": "~3.0.0",
@@ -57,7 +47,7 @@
 		"thunbolt/doctrine": "~1.0.0",
 		"thunbolt/bundles": "~1.0.0",
 		"thunbolt/localization": "~2.0.0",
-		"thunbolt/template-form-renderer": "~2.0.0",
+		"thunbolt/template-form-renderer": "^2.0",
 
 		"prolib/metadata": "~1.0.0"
 	},
