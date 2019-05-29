@@ -21,10 +21,12 @@ final class SignInForm extends BaseForm implements ISignInForm {
 		$form = $this->create();
 
 		$form->addText('name', 'Email')
+			->setHtmlAttribute('placeholder', 'Email')
 			->setRequired()
 			->addRule($form::EMAIL);
 
 		$form->addPassword('password', 'Heslo')
+			->setHtmlAttribute('placeholder', 'Heslo')
 			->setRequired();
 
 		$form->addCheckbox('remember', 'Zapamatovat');
