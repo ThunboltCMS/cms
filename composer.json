@@ -37,7 +37,6 @@
 		"webchemistry/error-presenter": "~2.0",
 		"webchemistry/assets-builder": "^1.1.1",
 
-		"thunbolt/composer-installer": "~2.0.0",
 		"thunbolt/application": "~3.0.1",
 		"thunbolt/templates": "~3.0.0",
 		"thunbolt/thunbolt": "~3.0.0",
