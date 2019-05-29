@@ -2,7 +2,6 @@ php:
 	date.timezone: Europe/Prague
 
 includes:
-    - bundles.neon
     - extensions.neon
     - services.neon
 
@@ -43,7 +42,8 @@ orm:
 		defaultRepositoryClassName: App\Doctrine\Repository
 
 orm.annotations:
-	paths: []
+	paths:
+		- %appDir%/model/Entities
 	cache: Doctrine\Common\Cache\FilesystemCache(%tempDir%/cache/Doctrine.Annotations)
 	ignore:
 		- isAllowed

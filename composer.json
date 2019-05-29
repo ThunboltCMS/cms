@@ -44,7 +44,6 @@
 		"thunbolt/bar": "dev-master",
 		"thunbolt/flashes": "~1.0.0",
 		"thunbolt/doctrine": "~1.0.0",
-		"thunbolt/bundles": "~1.0.0",
 		"thunbolt/localization": "~2.0.0",
 		"thunbolt/template-form-renderer": "^2.0",
 
@@ -53,7 +52,8 @@
 	"autoload": {
 		"psr-4": {
 			"App\\": ["app/src/"],
-			"": ["app/bundles/"]
+			"": ["app/bundles/"],
+			"Model\\": ["app/model/"]
 		},
 		"classmap": [
 			"app/Booting.php"
