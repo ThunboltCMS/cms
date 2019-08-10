@@ -39,7 +39,7 @@
 
 		"thunbolt/application": "~3.0.1",
 		"thunbolt/templates": "~3.0.0",
-		"thunbolt/thunbolt": "~3.0.0",
+		"thunbolt/thunbolt": "~4.0.0",
 		"thunbolt/user": "~3.0.0",
 		"thunbolt/bar": "dev-master",
 		"thunbolt/flashes": "~1.0.0",
